@@ -66,7 +66,25 @@ const GOLEADOR_PAIS = {
   'Ousmane Dembélé': 'Francia',
   'Julián Álvarez': 'Argentina',
 };
-const PIE_COLORS = ['#C62828', '#1565C0', '#2E7D32', '#F57C00', '#6A1B9A', '#00838F'];
+// Colores por equipo (fijos, basados en la identidad del país)
+const TEAM_COLORS = {
+  'España':       '#C62828', // rojo
+  'Francia':      '#1565C0', // azul
+  'Brasil':       '#2E7D32', // verde
+  'Argentina':    '#5BAEE0', // celeste
+  'Alemania':     '#212121', // negro
+  'Inglaterra':   '#E53935',
+  'Portugal':     '#8E0F0F',
+  'Países Bajos': '#F26522', // naranja
+  'México':       '#0F9D58',
+  'Italia':       '#0D47A1',
+  'Uruguay':      '#4FC3F7',
+  'Colombia':     '#FFC107',
+};
+const FALLBACK_COLORS = ['#F57C00', '#6A1B9A', '#00838F', '#AD1457', '#558B2F'];
+function colorEquipo(equipo, fallbackIdx = 0) {
+  return TEAM_COLORS[equipo] || FALLBACK_COLORS[fallbackIdx % FALLBACK_COLORS.length];
+}
 
 function flag(equipo) { return FLAGS[equipo] || '🏳️'; }
 
@@ -315,13 +333,15 @@ function renderCampeon() {
   const sorted = Object.entries(groups).sort((a, b) => b[1].length - a[1].length);
   const total = DATA.bonus.length;
 
-  // Pie chart con conic-gradient
+  // Pie chart con conic-gradient (colores fijos por equipo)
   let accum = 0;
-  const stops = sorted.map(([equipo, personas], i) => {
+  let fallbackI = 0;
+  const colorOf = (eq) => TEAM_COLORS[eq] || FALLBACK_COLORS[fallbackI++ % FALLBACK_COLORS.length];
+  const stops = sorted.map(([equipo, personas]) => {
     const pct = personas.length / total * 100;
     const start = accum;
     accum += pct;
-    return `${PIE_COLORS[i % PIE_COLORS.length]} ${start}% ${accum}%`;
+    return `${colorOf(equipo)} ${start}% ${accum}%`;
   }).join(', ');
 
   // Detectar empates para mostrar "empate técnico"
@@ -332,17 +352,18 @@ function renderCampeon() {
   document.getElementById('campeon-pie').innerHTML = `
     <div class="pie-chart" style="background: conic-gradient(${stops});"></div>
     <div class="pie-list">
-      ${sorted.map(([equipo, personas], i) => {
+      ${sorted.map(([equipo, personas]) => {
         const pct = (personas.length / total * 100).toFixed(1);
         const isMax = personas.length === maxCount && empateMax;
+        const col = colorEquipo(equipo);
         return `<div class="pie-row">
-          <span class="dot" style="background:${PIE_COLORS[i % PIE_COLORS.length]}"></span>
+          <span class="dot" style="background:${col}"></span>
           <span class="flag-big">${flag(equipo)}</span>
           <div class="info">
             <div class="equipo">${escapeHtml(equipo)}</div>
             <div class="votos">${personas.length} voto${personas.length === 1 ? '' : 's'}${isMax ? ' · empate técnico' : ''}</div>
           </div>
-          <div class="pct" style="color:${PIE_COLORS[i % PIE_COLORS.length]}">${pct}%</div>
+          <div class="pct" style="color:${col}">${pct}%</div>
         </div>`;
       }).join('')}
     </div>
@@ -351,8 +372,8 @@ function renderCampeon() {
   // Detalle: quiénes votaron por cada equipo
   document.getElementById('campeon-detalle').innerHTML = `
     <div class="campeon-detalle-title">Quiénes votaron por cada equipo</div>
-    ${sorted.map(([equipo, personas], i) => `
-      <div class="campeon-detalle-row" style="border-left-color: ${PIE_COLORS[i % PIE_COLORS.length]};">
+    ${sorted.map(([equipo, personas]) => `
+      <div class="campeon-detalle-row" style="border-left-color: ${colorEquipo(equipo)};">
         <span class="flag-md">${flag(equipo)}</span>
         <span class="equipo-nombre">${escapeHtml(equipo)}</span>
         <span class="personas">${personas.map(escapeHtml).join(', ')}</span>
