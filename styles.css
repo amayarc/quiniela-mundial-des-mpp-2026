@@ -877,6 +877,16 @@ main {
   justify-content: center;
   flex-wrap: wrap;
 }
+.save-msg {
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: 8px;
+  min-height: 20px;
+}
+.save-msg.pending { color: var(--muted); }
+.save-msg.ok      { color: #2E7D32; }
+.save-msg.err     { color: #C44E15; }
 
 /* ========= Footer ========= */
 footer {

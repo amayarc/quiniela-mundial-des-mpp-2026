@@ -1,10 +1,40 @@
 // ========= App principal =========
+const FIREBASE_URL = "https://quiniela-des-mpp-2026-default-rtdb.firebaseio.com";
 let DATA = null;
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {
+    // 1. Cargar base estática (predicciones, bonus picks, duelos asignados)
     const res = await fetch('data.json?v=' + Date.now());
     DATA = await res.json();
+
+    // 2. Cargar resultados "vivos" desde Firebase (sobreescriben los del JSON)
+    try {
+      const fbRes = await fetch(FIREBASE_URL + '/live.json?_=' + Date.now());
+      if (fbRes.ok) {
+        const fb = await fbRes.json();
+        if (fb) {
+          if (fb.resultados) {
+            Object.entries(fb.resultados).forEach(([num, r]) => {
+              const p = DATA.partidos.find(x => x.num === Number(num));
+              if (p) {
+                p.gol_local = (r.l != null) ? Number(r.l) : null;
+                p.gol_visit = (r.v != null) ? Number(r.v) : null;
+                p.jugado = p.gol_local != null && p.gol_visit != null;
+              }
+            });
+          }
+          DATA.meta.campeon_real  = fb.campeon_real  || null;
+          DATA.meta.goleador_real = fb.goleador_real || null;
+        }
+      }
+    } catch (fbErr) {
+      console.warn('No se pudo leer Firebase, usando solo JSON:', fbErr);
+    }
+
+    // 3. Recalcular puntos y clasificación
+    recalcularTodo(DATA);
+
     initTabs();
     initSubTabs();
     renderHeaderPills();
@@ -23,6 +53,77 @@ document.addEventListener('DOMContentLoaded', async () => {
       '<p>Revisa que <code>data.json</code> esté en el repo.</p></div>';
   }
 });
+
+// ========= Recalcular puntos y clasificación =========
+function recalcularTodo(data) {
+  data.meta.partidos_jugados = data.partidos.filter(p => p.jugado).length;
+
+  const stats = {};
+  data.participantes.forEach(p => {
+    stats[p.slot] = { nombre: p.nombre, pts_partidos: 0, pts_bonus: 0, pts_duelos: 0,
+                      marcadores_exactos: 0, ganadores_correctos: 0, fallos: 0 };
+  });
+
+  // Partidos
+  data.predicciones.forEach(grupo => {
+    const partido = data.partidos.find(x => x.num === grupo.partido_num);
+    if (!partido) return;
+    grupo.predicciones.forEach(pr => {
+      const pts = calcPtsPartido(pr.local, pr.visitante, partido.gol_local, partido.gol_visit);
+      pr.pts = pts;
+      if (pts === 3) { stats[pr.slot].marcadores_exactos++; stats[pr.slot].pts_partidos += 3; }
+      else if (pts === 1) { stats[pr.slot].ganadores_correctos++; stats[pr.slot].pts_partidos += 1; }
+      else if (pts === 0) { stats[pr.slot].fallos++; }
+    });
+  });
+
+  // Bonus
+  data.bonus.forEach(b => {
+    b.pts_campeon  = calcPtsBonus(b.campeon,  data.meta.campeon_real,  10);
+    b.pts_goleador = calcPtsBonus(b.goleador, data.meta.goleador_real, 5);
+    if (b.pts_campeon)  stats[b.slot].pts_bonus += b.pts_campeon;
+    if (b.pts_goleador) stats[b.slot].pts_bonus += b.pts_goleador;
+  });
+
+  // Duelos
+  data.duelos.forEach(d => {
+    const part = data.partidos.find(x => x.num === d.partido_num);
+    if (part && part.jugado) {
+      const gl = part.gol_local, gv = part.gol_visit;
+      if (gl > gv) { d.pts_a = 2; d.pts_b = 0; d.ganador = 'A'; }
+      else if (gl < gv) { d.pts_a = 0; d.pts_b = 2; d.ganador = 'B'; }
+      else { d.pts_a = 0; d.pts_b = 0; d.ganador = 'empate'; }
+      d.estado = 'ya_jugado';
+      const slotA = data.participantes.find(p => p.nombre === d.persona_a)?.slot;
+      const slotB = data.participantes.find(p => p.nombre === d.persona_b)?.slot;
+      if (slotA && d.pts_a) stats[slotA].pts_duelos += d.pts_a;
+      if (slotB && d.pts_b) stats[slotB].pts_duelos += d.pts_b;
+    } else {
+      d.pts_a = d.pts_b = null;
+      d.ganador = null;
+      d.estado = 'pendiente';
+    }
+  });
+
+  // Clasificación
+  data.clasificacion = Object.entries(stats).map(([slot, s]) => ({
+    slot: Number(slot),
+    nombre: s.nombre,
+    pts_total: s.pts_partidos + s.pts_bonus + s.pts_duelos,
+    pts_partidos: s.pts_partidos,
+    pts_bonus: s.pts_bonus,
+    pts_duelos: s.pts_duelos,
+    marcadores_exactos: s.marcadores_exactos,
+    ganadores_correctos: s.ganadores_correctos,
+    fallos: s.fallos,
+  }));
+  data.clasificacion.sort((a, b) =>
+    (b.pts_total - a.pts_total) ||
+    (b.marcadores_exactos - a.marcadores_exactos) ||
+    (a.slot - b.slot)
+  );
+  data.clasificacion.forEach((c, i) => c.pos = i + 1);
+}
 
 // ========= Tabs =========
 function initTabs() {
@@ -540,6 +641,54 @@ function initCapturar() {
   });
   document.getElementById('capt-filtro').addEventListener('change', renderCapturarPartidos);
   document.getElementById('btn-download').addEventListener('click', descargarJSON);
+  document.getElementById('btn-save').addEventListener('click', guardarEnFirebase);
+}
+
+// Guarda los resultados directamente en Firebase
+async function guardarEnFirebase() {
+  if (!CAPT) return;
+  const msg = document.getElementById('save-msg');
+  const btn = document.getElementById('btn-save');
+  btn.disabled = true;
+  msg.textContent = '⏳ Guardando en la nube...';
+  msg.className = 'save-msg pending';
+
+  // Limpiar valores
+  CAPT.partidos.forEach(p => {
+    if (p.gol_local === '') p.gol_local = null;
+    if (p.gol_visit === '') p.gol_visit = null;
+  });
+  CAPT.meta.campeon_real = (CAPT.meta.campeon_real || '').trim() || null;
+  CAPT.meta.goleador_real = (CAPT.meta.goleador_real || '').trim() || null;
+
+  // Payload: solo resultados, campeón y goleador
+  const payload = {
+    resultados:    {},
+    campeon_real:  CAPT.meta.campeon_real,
+    goleador_real: CAPT.meta.goleador_real,
+  };
+  CAPT.partidos.forEach(p => {
+    if (p.gol_local != null && p.gol_visit != null) {
+      payload.resultados[String(p.num)] = { l: p.gol_local, v: p.gol_visit };
+    }
+  });
+
+  try {
+    const res = await fetch(FIREBASE_URL + '/live.json', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    msg.textContent = '✅ Guardado. Refrescando la web...';
+    msg.className = 'save-msg ok';
+    // Esperar un momento para que el usuario vea el mensaje, luego recargar
+    setTimeout(() => location.reload(), 1500);
+  } catch (e) {
+    msg.textContent = '❌ Error al guardar: ' + e.message;
+    msg.className = 'save-msg err';
+    btn.disabled = false;
+  }
 }
 
 // Estado mutable de la captura — clon de DATA que se modifica al ingresar resultados
@@ -606,82 +755,19 @@ function renderCapturarPartidos() {
   });
 }
 
-// Recalcula puntos completos y descarga el JSON
+// Descarga JSON como backup local (sin pasar por Firebase)
 function descargarJSON() {
-  // Limpiar valores no-numéricos
+  // Limpiar y normalizar
   CAPT.partidos.forEach(p => {
     if (p.gol_local === '') p.gol_local = null;
     if (p.gol_visit === '') p.gol_visit = null;
     p.jugado = p.gol_local != null && p.gol_visit != null;
   });
-  CAPT.meta.partidos_jugados = CAPT.partidos.filter(p => p.jugado).length;
-  CAPT.meta.campeon_real = (CAPT.meta.campeon_real || '').trim() || null;
+  CAPT.meta.campeon_real  = (CAPT.meta.campeon_real  || '').trim() || null;
   CAPT.meta.goleador_real = (CAPT.meta.goleador_real || '').trim() || null;
 
-  // Recalcular predicciones y stats
-  const stats = {};
-  CAPT.participantes.forEach(p => {
-    stats[p.slot] = { nombre: p.nombre, pts_partidos: 0, pts_bonus: 0, pts_duelos: 0,
-                      marcadores_exactos: 0, ganadores_correctos: 0, fallos: 0 };
-  });
-
-  CAPT.predicciones.forEach(grupo => {
-    const partido = CAPT.partidos.find(x => x.num === grupo.partido_num);
-    if (!partido) return;
-    grupo.predicciones.forEach(pr => {
-      const pts = calcPtsPartido(pr.local, pr.visitante, partido.gol_local, partido.gol_visit);
-      pr.pts = pts;
-      if (pts === 3) { stats[pr.slot].marcadores_exactos++; stats[pr.slot].pts_partidos += 3; }
-      else if (pts === 1) { stats[pr.slot].ganadores_correctos++; stats[pr.slot].pts_partidos += 1; }
-      else if (pts === 0) { stats[pr.slot].fallos++; }
-    });
-  });
-
-  // Bonus
-  CAPT.bonus.forEach(b => {
-    b.pts_campeon = calcPtsBonus(b.campeon, CAPT.meta.campeon_real, 10);
-    b.pts_goleador = calcPtsBonus(b.goleador, CAPT.meta.goleador_real, 5);
-    if (b.pts_campeon) stats[b.slot].pts_bonus += b.pts_campeon;
-    if (b.pts_goleador) stats[b.slot].pts_bonus += b.pts_goleador;
-  });
-
-  // Duelos
-  CAPT.duelos.forEach(d => {
-    const part = CAPT.partidos.find(x => x.num === d.partido_num);
-    if (part && part.jugado) {
-      const gl = part.gol_local, gv = part.gol_visit;
-      if (gl > gv) { d.pts_a = 2; d.pts_b = 0; d.ganador = 'A'; }
-      else if (gl < gv) { d.pts_a = 0; d.pts_b = 2; d.ganador = 'B'; }
-      else { d.pts_a = 0; d.pts_b = 0; d.ganador = 'empate'; }
-      d.estado = 'ya_jugado';
-      // Sumar
-      const slotA = CAPT.participantes.find(p => p.nombre === d.persona_a)?.slot;
-      const slotB = CAPT.participantes.find(p => p.nombre === d.persona_b)?.slot;
-      if (slotA && d.pts_a) stats[slotA].pts_duelos += d.pts_a;
-      if (slotB && d.pts_b) stats[slotB].pts_duelos += d.pts_b;
-    } else {
-      d.pts_a = d.pts_b = null;
-      d.ganador = null;
-      d.estado = 'pendiente';
-    }
-  });
-
-  // Clasificación
-  CAPT.clasificacion = Object.entries(stats).map(([slot, s]) => ({
-    slot: Number(slot),
-    nombre: s.nombre,
-    pts_total: s.pts_partidos + s.pts_bonus + s.pts_duelos,
-    pts_partidos: s.pts_partidos,
-    pts_bonus: s.pts_bonus,
-    pts_duelos: s.pts_duelos,
-    marcadores_exactos: s.marcadores_exactos,
-    ganadores_correctos: s.ganadores_correctos,
-    fallos: s.fallos,
-  }));
-  CAPT.clasificacion.sort((a, b) => -a.pts_total + b.pts_total || -a.marcadores_exactos + b.marcadores_exactos || a.slot - b.slot);
-  CAPT.clasificacion.forEach((c, i) => c.pos = i + 1);
-
-  // Descargar como archivo
+  // Recalcular todo y descargar
+  recalcularTodo(CAPT);
   const blob = new Blob([JSON.stringify(CAPT, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
@@ -691,8 +777,6 @@ function descargarJSON() {
   a.click();
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
-
-  alert('✅ data.json descargado. Súbelo al repo de GitHub para que la web se actualice.');
 }
 
 function calcPtsPartido(pl, pv, rl, rv) {
