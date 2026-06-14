@@ -28,7 +28,8 @@
     <button class="tab active" data-tab="clasificacion">🏆 Clasificación</button>
     <button class="tab" data-tab="partidos">📅 Partidos</button>
     <button class="tab" data-tab="por-persona">👤 Por persona</button>
-    <button class="tab" data-tab="campeon">⭐ Campeón</button>
+    <button class="tab" data-tab="campeon">🏆 Campeón</button>
+    <button class="tab" data-tab="goleador">⚽ Goleador</button>
     <button class="tab" data-tab="duelos">⚔️ Duelos 1:1</button>
     <button class="tab" data-tab="reglas">📋 Reglas</button>
   </nav>
@@ -84,13 +85,23 @@
 
     <!-- Campeón -->
     <section id="tab-campeon" class="tab-content">
-      <h2>Bonus: Campeón y Goleador</h2>
-      <div class="sub-tabs">
-        <button class="sub-tab active" data-sub="campeon">🏆 Campeón (10 pts)</button>
-        <button class="sub-tab" data-sub="goleador">⚽ Goleador (5 pts)</button>
+      <div class="hero-bonus">
+        <div class="hero-title">¿Quién será el</div>
+        <h2 class="hero-h2">Campeón del Mundial 2026?</h2>
+        <p class="hero-sub">Apuesta bonus · 10 pts</p>
       </div>
-      <div id="bonus-campeon-content" class="sub-content active"></div>
-      <div id="bonus-goleador-content" class="sub-content"></div>
+      <div id="campeon-pie" class="pie-wrap"></div>
+      <div id="campeon-cards" class="votos-grid"></div>
+    </section>
+
+    <!-- Goleador -->
+    <section id="tab-goleador" class="tab-content">
+      <div class="hero-bonus">
+        <div class="hero-title">¿Quién será el</div>
+        <h2 class="hero-h2">Máximo Goleador del Mundial 2026?</h2>
+        <p class="hero-sub">Apuesta bonus · 5 pts</p>
+      </div>
+      <div id="goleador-ranking" class="goleador-grid"></div>
     </section>
 
     <!-- Duelos -->

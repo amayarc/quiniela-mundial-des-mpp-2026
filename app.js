@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderClasificacion();
     renderPartidos();
     renderPorPersona();
-    renderBonus();
+    renderCampeon();
+    renderGoleador();
     renderDuelos();
   } catch (e) {
     console.error('Error cargando data.json:', e);
@@ -35,17 +36,38 @@ function initTabs() {
   });
 }
 
-function initSubTabs() {
-  document.querySelectorAll('.sub-tab').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const sub = btn.dataset.sub;
-      btn.parentElement.querySelectorAll('.sub-tab').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.sub-content').forEach(c => c.classList.remove('active'));
-      btn.classList.add('active');
-      document.getElementById('bonus-' + sub + '-content').classList.add('active');
-    });
-  });
-}
+function initSubTabs() { /* legacy - ya no se usa */ }
+
+// Mapping país → emoji de bandera (para Campeón y Goleador)
+const FLAGS = {
+  'España': '🇪🇸', 'Espana': '🇪🇸',
+  'Francia': '🇫🇷',
+  'Brasil': '🇧🇷',
+  'Noruega': '🇳🇴',
+  'Inglaterra': '🏴󠁧󠁢󠁥󠁮󠁧󠁿', 'Reino Unido': '🇬🇧',
+  'Argentina': '🇦🇷',
+  'México': '🇲🇽', 'Mexico': '🇲🇽',
+  'Portugal': '🇵🇹',
+  'Alemania': '🇩🇪',
+  'Países Bajos': '🇳🇱', 'Holanda': '🇳🇱',
+  'Italia': '🇮🇹',
+  'Uruguay': '🇺🇾',
+  'Colombia': '🇨🇴',
+};
+// Jugador → país (para mostrar bandera)
+const GOLEADOR_PAIS = {
+  'Kylian Mbappé': 'Francia',
+  'Erling Haaland': 'Noruega',
+  'Vinícius Júnior': 'Brasil',
+  'Endrick': 'Brasil',
+  'Lamine Yamal': 'España',
+  'Harry Kane': 'Inglaterra',
+  'Ousmane Dembélé': 'Francia',
+  'Julián Álvarez': 'Argentina',
+};
+const PIE_COLORS = ['#C62828', '#1565C0', '#2E7D32', '#F57C00', '#6A1B9A', '#00838F'];
+
+function flag(equipo) { return FLAGS[equipo] || '🏳️'; }
 
 // ========= Header pills =========
 function renderHeaderPills() {
@@ -258,33 +280,79 @@ function renderPersonaPartido(partido, pred) {
   `;
 }
 
-// ========= Bonus (Campeón / Goleador) =========
-function renderBonus() {
-  renderBonusList('campeon', 'campeon');
-  renderBonusList('goleador', 'goleador');
-}
-
-function renderBonusList(tipo, key) {
-  const cont = document.getElementById(`bonus-${tipo}-content`);
-  // Agrupar por valor
+// ========= Campeón =========
+function renderCampeon() {
+  // Agrupar votos por equipo
   const groups = {};
   DATA.bonus.forEach(b => {
-    const v = (b[key] || '— sin selección —').trim();
+    const v = (b.campeon || '— sin selección —').trim();
     if (!groups[v]) groups[v] = [];
     groups[v].push(b.nombre);
   });
   const sorted = Object.entries(groups).sort((a, b) => b[1].length - a[1].length);
-  cont.innerHTML = `
-    <div class="votos-grid">
-      ${sorted.map(([equipo, personas]) => `
-        <div class="voto-card">
-          <div class="voto-equipo">${escapeHtml(equipo)}</div>
-          <div class="voto-count">${personas.length} voto${personas.length === 1 ? '' : 's'}</div>
-          <div class="voto-personas">${personas.map(escapeHtml).join(', ')}</div>
-        </div>
-      `).join('')}
+  const total = DATA.bonus.length;
+
+  // Pie chart con conic-gradient
+  let accum = 0;
+  const stops = sorted.map(([equipo, personas], i) => {
+    const pct = personas.length / total * 100;
+    const start = accum;
+    accum += pct;
+    return `${PIE_COLORS[i % PIE_COLORS.length]} ${start}% ${accum}%`;
+  }).join(', ');
+
+  document.getElementById('campeon-pie').innerHTML = `
+    <div class="pie" style="background: conic-gradient(${stops});"></div>
+    <div class="pie-legend">
+      ${sorted.map(([equipo, personas], i) => {
+        const pct = (personas.length / total * 100).toFixed(1);
+        return `<div class="pie-legend-item">
+          <span class="pie-legend-dot" style="background:${PIE_COLORS[i % PIE_COLORS.length]}"></span>
+          ${flag(equipo)} ${escapeHtml(equipo)} · <strong>${personas.length}</strong> (${pct}%)
+        </div>`;
+      }).join('')}
     </div>
   `;
+
+  // Cards detalladas
+  document.getElementById('campeon-cards').innerHTML = sorted.map(([equipo, personas], i) => {
+    const pct = (personas.length / total * 100).toFixed(1);
+    return `
+      <div class="voto-card" style="border-left-color: ${PIE_COLORS[i % PIE_COLORS.length]};">
+        <div class="voto-equipo"><span class="voto-flag">${flag(equipo)}</span> ${escapeHtml(equipo)}</div>
+        <div class="voto-count"><strong>${personas.length}</strong> voto${personas.length === 1 ? '' : 's'} · ${pct}%</div>
+        <div class="voto-bar"><div class="voto-bar-fill" style="width:${pct}%"></div></div>
+        <div class="voto-personas">${personas.map(escapeHtml).join(', ')}</div>
+      </div>
+    `;
+  }).join('');
+}
+
+// ========= Goleador =========
+function renderGoleador() {
+  const groups = {};
+  DATA.bonus.forEach(b => {
+    const v = (b.goleador || '— sin selección —').trim();
+    if (!groups[v]) groups[v] = [];
+    groups[v].push(b.nombre);
+  });
+  const sorted = Object.entries(groups).sort((a, b) => b[1].length - a[1].length);
+
+  document.getElementById('goleador-ranking').innerHTML = sorted.map(([jugador, personas], i) => {
+    const rank = i + 1;
+    const pais = GOLEADOR_PAIS[jugador] || '';
+    const flagEmoji = pais ? flag(pais) : '⚽';
+    const rankCls = rank <= 3 ? `rank-${rank}` : '';
+    return `
+      <div class="goleador-card ${rankCls}">
+        <div class="goleador-rank">${rank}</div>
+        <div class="goleador-flag">${flagEmoji}</div>
+        <div class="goleador-name">${escapeHtml(jugador)}</div>
+        <div class="goleador-votes">${personas.length} voto${personas.length === 1 ? '' : 's'}${pais ? ' · ' + escapeHtml(pais) : ''}</div>
+        <div class="goleador-personas">${personas.map(escapeHtml).join(', ')}</div>
+      </div>
+    `;
+  }).join('');
 }
 
 // ========= Duelos =========

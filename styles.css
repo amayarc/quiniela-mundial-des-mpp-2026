@@ -338,30 +338,107 @@ main {
 }
 .persona-bonus div small { display: block; font-size: 0.7rem; opacity: 0.7; }
 
-/* ========= Bonus campeón/goleador ========= */
-.sub-tabs {
-  display: flex;
-  gap: 6px;
-  margin-bottom: 18px;
-  flex-wrap: wrap;
-}
-.sub-tab {
-  background: var(--card);
-  border: 2px solid var(--border);
-  padding: 8px 16px;
-  border-radius: 999px;
-  font-weight: 600;
-  cursor: pointer;
-  color: var(--muted);
-  transition: all 0.2s;
-}
-.sub-tab.active {
-  background: var(--orange);
+/* ========= Hero secciones Campeón / Goleador ========= */
+.hero-bonus {
+  background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
   color: #fff;
-  border-color: var(--orange);
+  text-align: center;
+  padding: 32px 20px 28px;
+  border-radius: 18px;
+  margin-bottom: 24px;
+  box-shadow: 0 6px 20px rgba(242, 101, 34, 0.25);
+  position: relative;
+  overflow: hidden;
 }
-.sub-content { display: none; }
-.sub-content.active { display: block; }
+.hero-bonus::before {
+  content: '⚽';
+  position: absolute;
+  font-size: 8rem;
+  opacity: 0.06;
+  top: -20px;
+  right: -10px;
+  transform: rotate(-20deg);
+}
+.hero-title {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.85;
+  margin-bottom: 4px;
+}
+.hero-h2 {
+  font-size: 1.8rem !important;
+  color: #fff !important;
+  margin-bottom: 8px !important;
+  line-height: 1.15;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.hero-sub {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--blue);
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-top: 6px;
+}
+
+/* ========= Pie chart Campeón ========= */
+.pie-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  background: var(--card);
+  padding: 24px;
+  border-radius: 16px;
+  margin-bottom: 22px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.pie {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  flex-shrink: 0;
+}
+.pie::after {
+  content: '🏆';
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  background: #fff;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.pie-legend {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pie-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.pie-legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+}
+
+/* ========= Cards de votos ========= */
 .votos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -380,15 +457,89 @@ main {
   font-weight: 700;
   color: var(--blue);
   margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
+.voto-flag { font-size: 1.5rem; }
 .voto-count {
   font-size: 0.88rem;
   color: var(--muted);
   margin-bottom: 8px;
 }
+.voto-bar {
+  height: 8px;
+  background: var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.voto-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--orange) 0%, var(--gold) 100%);
+  border-radius: 4px;
+}
 .voto-personas {
   font-size: 0.85rem;
   color: var(--text);
+}
+
+/* ========= Goleador ranking ========= */
+.goleador-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 14px;
+}
+.goleador-card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 2px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.goleador-card.rank-1 { border-color: var(--gold);   background: linear-gradient(180deg, #FFFCEB 0%, #fff 70%); }
+.goleador-card.rank-2 { border-color: var(--silver); background: linear-gradient(180deg, #F8F8F8 0%, #fff 70%); }
+.goleador-card.rank-3 { border-color: var(--bronze); background: linear-gradient(180deg, #FFF4E6 0%, #fff 70%); }
+.goleador-rank {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: var(--blue);
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+.goleador-card.rank-1 .goleador-rank { background: var(--gold); color: var(--blue); }
+.goleador-card.rank-2 .goleador-rank { background: var(--silver); color: var(--blue); }
+.goleador-card.rank-3 .goleador-rank { background: var(--bronze); color: #fff; }
+.goleador-flag {
+  font-size: 2.6rem;
+  margin-bottom: 6px;
+}
+.goleador-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--blue);
+  margin-bottom: 4px;
+}
+.goleador-votes {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--orange);
+  margin-bottom: 8px;
+}
+.goleador-personas {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.4;
 }
 
 /* ========= Duelos ========= */
