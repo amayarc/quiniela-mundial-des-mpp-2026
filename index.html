@@ -32,6 +32,7 @@
     <button class="tab" data-tab="goleador">⚽ Goleador</button>
     <button class="tab" data-tab="duelos">⚔️ Duelos 1:1</button>
     <button class="tab" data-tab="reglas">📋 Reglas</button>
+    <button class="tab" data-tab="capturar">🔐 Capturar</button>
   </nav>
 
   <main>
@@ -85,23 +86,27 @@
 
     <!-- Campeón -->
     <section id="tab-campeon" class="tab-content">
-      <div class="hero-bonus">
+      <div class="hero-bonus hero-blue">
+        <div class="hero-deco-l">⚽</div>
+        <div class="hero-deco-r">🏆</div>
         <div class="hero-title">¿Quién será el</div>
-        <h2 class="hero-h2">Campeón del Mundial 2026?</h2>
-        <p class="hero-sub">Apuesta bonus · 10 pts</p>
+        <h2 class="hero-h2">CAMPEÓN <span class="hero-h2-sub">del Mundial 2026?</span></h2>
+        <p class="hero-sub">🏆 BONUS · 10 PTS</p>
       </div>
-      <div id="campeon-pie" class="pie-wrap"></div>
-      <div id="campeon-cards" class="votos-grid"></div>
+      <div id="campeon-pie" class="pie-block"></div>
+      <div id="campeon-detalle"></div>
     </section>
 
     <!-- Goleador -->
     <section id="tab-goleador" class="tab-content">
-      <div class="hero-bonus">
+      <div class="hero-bonus hero-orange">
+        <div class="hero-deco-r">⚽</div>
         <div class="hero-title">¿Quién será el</div>
-        <h2 class="hero-h2">Máximo Goleador del Mundial 2026?</h2>
-        <p class="hero-sub">Apuesta bonus · 5 pts</p>
+        <h2 class="hero-h2">MÁXIMO GOLEADOR <span class="hero-h2-sub">del Mundial 2026?</span></h2>
+        <p class="hero-sub">⚽ BONUS · 5 PTS</p>
       </div>
-      <div id="goleador-ranking" class="goleador-grid"></div>
+      <div id="goleador-podium" class="goleador-podium"></div>
+      <div id="goleador-resto" class="goleador-resto"></div>
     </section>
 
     <!-- Duelos -->
@@ -109,6 +114,69 @@
       <h2>Duelos 1:1 — Fase de Grupos</h2>
       <p class="info">Cada participante tiene 2 duelos. Ganar el duelo = +2 pts.</p>
       <div id="duelos-list"></div>
+    </section>
+
+    <!-- Capturar (panel admin) -->
+    <section id="tab-capturar" class="tab-content">
+      <h2>🔐 Capturar resultados</h2>
+      <p class="info">Solo Amaya tiene la clave. Aquí se ingresan los marcadores reales de los partidos.</p>
+
+      <div id="capturar-login">
+        <div class="login-card">
+          <div class="login-icon">🔒</div>
+          <h3>Acceso restringido</h3>
+          <p>Ingresa la clave para capturar resultados</p>
+          <input type="password" id="login-pass" placeholder="Clave" autocomplete="off">
+          <button class="btn-primary" id="login-btn">Entrar</button>
+          <p class="login-error" id="login-error"></p>
+        </div>
+      </div>
+
+      <div id="capturar-panel" style="display:none;">
+        <div class="capt-instructions">
+          <p><strong>Cómo usar:</strong></p>
+          <ol>
+            <li>Llena los marcadores de los partidos jugados</li>
+            <li>Si aplica, llena Campeón y Goleador reales (al final del Mundial)</li>
+            <li>Click en <strong>"Descargar data.json"</strong> abajo</li>
+            <li>Sube el JSON nuevo al repo de GitHub (reemplaza el viejo)</li>
+            <li>La web se actualizará sola en 1-2 minutos</li>
+          </ol>
+        </div>
+
+        <div class="capt-section">
+          <h3>🏆 Bonus final del Mundial</h3>
+          <div class="capt-bonus-grid">
+            <div>
+              <label>Campeón real</label>
+              <input type="text" id="capt-campeon" placeholder="Ej: España">
+            </div>
+            <div>
+              <label>Máximo goleador real</label>
+              <input type="text" id="capt-goleador" placeholder="Ej: Kylian Mbappé">
+            </div>
+          </div>
+        </div>
+
+        <div class="capt-section">
+          <h3>📅 Resultados de partidos</h3>
+          <div class="filter-row">
+            <label>Mostrar:
+              <select id="capt-filtro">
+                <option value="hoy">📍 Solo HOY</option>
+                <option value="todos">Todos</option>
+                <option value="pendientes">Solo sin capturar</option>
+              </select>
+            </label>
+          </div>
+          <div id="capt-partidos-list"></div>
+        </div>
+
+        <div class="capt-actions">
+          <button class="btn-primary" id="btn-download">⬇️ Descargar data.json actualizado</button>
+          <button class="btn-secondary" id="btn-logout">Salir</button>
+        </div>
+      </div>
     </section>
 
     <!-- Reglas -->

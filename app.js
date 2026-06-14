@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderCampeon();
     renderGoleador();
     renderDuelos();
+    initCapturar();
   } catch (e) {
     console.error('Error cargando data.json:', e);
     document.querySelector('main').innerHTML =
@@ -68,6 +69,11 @@ const GOLEADOR_PAIS = {
 const PIE_COLORS = ['#C62828', '#1565C0', '#2E7D32', '#F57C00', '#6A1B9A', '#00838F'];
 
 function flag(equipo) { return FLAGS[equipo] || '🏳️'; }
+
+function getHoyIso() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+}
 
 // ========= Header pills =========
 function renderHeaderPills() {
@@ -132,20 +138,38 @@ function renderPartidos(filtroDia = '') {
     filtroEl.addEventListener('change', e => renderPartidos(e.target.value));
   }
 
+  const hoy = getHoyIso();
   const partidos = DATA.partidos.filter(p => !filtroDia || p.fecha === filtroDia);
-  // Agrupar por día
-  const byDay = {};
-  partidos.forEach(p => {
-    if (!byDay[p.fecha]) byDay[p.fecha] = [];
-    byDay[p.fecha].push(p);
-  });
 
-  cont.innerHTML = Object.entries(byDay).map(([dia, list]) => `
+  // Si hay filtro de día, no priorizamos HOY
+  const partidosHoy = filtroDia ? [] : partidos.filter(p => p.fecha_iso === hoy);
+  const partidosResto = filtroDia ? partidos : partidos.filter(p => p.fecha_iso !== hoy);
+
+  // Agrupar el resto por día y ordenar cronológicamente
+  const byDay = {};
+  partidosResto.forEach(p => {
+    const k = p.fecha || 'Sin fecha';
+    if (!byDay[k]) byDay[k] = { iso: p.fecha_iso || '', label: k, list: [] };
+    byDay[k].list.push(p);
+  });
+  const grupos = Object.values(byDay).sort((a, b) => (a.iso || '').localeCompare(b.iso || ''));
+
+  let html = '';
+  if (partidosHoy.length > 0) {
+    html += `
+      <div class="partidos-day day-today">
+        <h3>📍 HOY · ${partidosHoy[0].fecha}</h3>
+        ${partidosHoy.map(p => renderPartidoCard(p, true)).join('')}
+      </div>
+    `;
+  }
+  html += grupos.map(g => `
     <div class="partidos-day">
-      <h3>${dia}</h3>
-      ${list.map(p => renderPartidoCard(p)).join('')}
+      <h3>${g.label}</h3>
+      ${g.list.map(p => renderPartidoCard(p, false)).join('')}
     </div>
   `).join('');
+  cont.innerHTML = html;
 
   // Click handlers para expandir
   cont.querySelectorAll('.partido-card').forEach(card => {
@@ -282,7 +306,6 @@ function renderPersonaPartido(partido, pred) {
 
 // ========= Campeón =========
 function renderCampeon() {
-  // Agrupar votos por equipo
   const groups = {};
   DATA.bonus.forEach(b => {
     const v = (b.campeon || '— sin selección —').trim();
@@ -301,31 +324,41 @@ function renderCampeon() {
     return `${PIE_COLORS[i % PIE_COLORS.length]} ${start}% ${accum}%`;
   }).join(', ');
 
+  // Detectar empates para mostrar "empate técnico"
+  const counts = sorted.map(([_, p]) => p.length);
+  const maxCount = counts[0];
+  const empateMax = counts.filter(c => c === maxCount).length > 1;
+
   document.getElementById('campeon-pie').innerHTML = `
-    <div class="pie" style="background: conic-gradient(${stops});"></div>
-    <div class="pie-legend">
+    <div class="pie-chart" style="background: conic-gradient(${stops});"></div>
+    <div class="pie-list">
       ${sorted.map(([equipo, personas], i) => {
         const pct = (personas.length / total * 100).toFixed(1);
-        return `<div class="pie-legend-item">
-          <span class="pie-legend-dot" style="background:${PIE_COLORS[i % PIE_COLORS.length]}"></span>
-          ${flag(equipo)} ${escapeHtml(equipo)} · <strong>${personas.length}</strong> (${pct}%)
+        const isMax = personas.length === maxCount && empateMax;
+        return `<div class="pie-row">
+          <span class="dot" style="background:${PIE_COLORS[i % PIE_COLORS.length]}"></span>
+          <span class="flag-big">${flag(equipo)}</span>
+          <div class="info">
+            <div class="equipo">${escapeHtml(equipo)}</div>
+            <div class="votos">${personas.length} voto${personas.length === 1 ? '' : 's'}${isMax ? ' · empate técnico' : ''}</div>
+          </div>
+          <div class="pct" style="color:${PIE_COLORS[i % PIE_COLORS.length]}">${pct}%</div>
         </div>`;
       }).join('')}
     </div>
   `;
 
-  // Cards detalladas
-  document.getElementById('campeon-cards').innerHTML = sorted.map(([equipo, personas], i) => {
-    const pct = (personas.length / total * 100).toFixed(1);
-    return `
-      <div class="voto-card" style="border-left-color: ${PIE_COLORS[i % PIE_COLORS.length]};">
-        <div class="voto-equipo"><span class="voto-flag">${flag(equipo)}</span> ${escapeHtml(equipo)}</div>
-        <div class="voto-count"><strong>${personas.length}</strong> voto${personas.length === 1 ? '' : 's'} · ${pct}%</div>
-        <div class="voto-bar"><div class="voto-bar-fill" style="width:${pct}%"></div></div>
-        <div class="voto-personas">${personas.map(escapeHtml).join(', ')}</div>
+  // Detalle: quiénes votaron por cada equipo
+  document.getElementById('campeon-detalle').innerHTML = `
+    <div class="campeon-detalle-title">Quiénes votaron por cada equipo</div>
+    ${sorted.map(([equipo, personas], i) => `
+      <div class="campeon-detalle-row" style="border-left-color: ${PIE_COLORS[i % PIE_COLORS.length]};">
+        <span class="flag-md">${flag(equipo)}</span>
+        <span class="equipo-nombre">${escapeHtml(equipo)}</span>
+        <span class="personas">${personas.map(escapeHtml).join(', ')}</span>
       </div>
-    `;
-  }).join('');
+    `).join('')}
+  `;
 }
 
 // ========= Goleador =========
@@ -338,18 +371,41 @@ function renderGoleador() {
   });
   const sorted = Object.entries(groups).sort((a, b) => b[1].length - a[1].length);
 
-  document.getElementById('goleador-ranking').innerHTML = sorted.map(([jugador, personas], i) => {
-    const rank = i + 1;
+  // Podio top 3 con orden visual: 2°, 1°, 3°
+  const top3 = sorted.slice(0, 3);
+  const visualOrder = [];
+  if (top3[1]) visualOrder.push({ rank: 2, data: top3[1] });
+  if (top3[0]) visualOrder.push({ rank: 1, data: top3[0] });
+  if (top3[2]) visualOrder.push({ rank: 3, data: top3[2] });
+
+  document.getElementById('goleador-podium').innerHTML = visualOrder.map(({ rank, data }) => {
+    const [jugador, personas] = data;
     const pais = GOLEADOR_PAIS[jugador] || '';
     const flagEmoji = pais ? flag(pais) : '⚽';
-    const rankCls = rank <= 3 ? `rank-${rank}` : '';
     return `
-      <div class="goleador-card ${rankCls}">
-        <div class="goleador-rank">${rank}</div>
-        <div class="goleador-flag">${flagEmoji}</div>
-        <div class="goleador-name">${escapeHtml(jugador)}</div>
-        <div class="goleador-votes">${personas.length} voto${personas.length === 1 ? '' : 's'}${pais ? ' · ' + escapeHtml(pais) : ''}</div>
-        <div class="goleador-personas">${personas.map(escapeHtml).join(', ')}</div>
+      <div class="podio-spot rank-${rank}">
+        <div class="podio-rank">${rank}</div>
+        <div class="podio-flag">${flagEmoji}</div>
+        <div class="podio-name">${escapeHtml(jugador)}</div>
+        <div class="podio-votes">${personas.length} voto${personas.length === 1 ? '' : 's'}</div>
+        <div class="podio-personas">${personas.map(escapeHtml).join(', ')}</div>
+      </div>
+    `;
+  }).join('');
+
+  // Resto (4° en adelante)
+  const resto = sorted.slice(3);
+  document.getElementById('goleador-resto').innerHTML = resto.map(([jugador, personas], i) => {
+    const rank = i + 4;
+    const pais = GOLEADOR_PAIS[jugador] || '';
+    const flagEmoji = pais ? flag(pais) : '⚽';
+    return `
+      <div class="resto-card">
+        <div class="resto-pos">${rank}°</div>
+        <div class="resto-flag">${flagEmoji}</div>
+        <div class="resto-name">${escapeHtml(jugador)}</div>
+        <div class="resto-votes">${personas.length} voto${personas.length === 1 ? '' : 's'}</div>
+        <div class="resto-persona">${personas.map(escapeHtml).join(', ')}</div>
       </div>
     `;
   }).join('');
@@ -358,7 +414,41 @@ function renderGoleador() {
 // ========= Duelos =========
 function renderDuelos() {
   const cont = document.getElementById('duelos-list');
-  cont.innerHTML = DATA.duelos.map(d => {
+  const hoy = getHoyIso();
+
+  // Enriquecer cada duelo con fecha del partido y ordenar
+  const duelos = DATA.duelos.map(d => {
+    const p = DATA.partidos.find(x => x.num === d.partido_num);
+    return { ...d, fecha_iso: p?.fecha_iso || '', fecha: p?.fecha || '' };
+  });
+  duelos.sort((a, b) => {
+    const aHoy = a.fecha_iso === hoy ? 0 : 1;
+    const bHoy = b.fecha_iso === hoy ? 0 : 1;
+    if (aHoy !== bHoy) return aHoy - bHoy;
+    return (a.fecha_iso || '').localeCompare(b.fecha_iso || '');
+  });
+
+  // Encabezado "HOY" si aplica
+  const hayHoy = duelos.some(d => d.fecha_iso === hoy);
+
+  let html = '';
+  let yaHubo = false;
+  let yaPasoHoy = false;
+  duelos.forEach(d => {
+    if (d.fecha_iso === hoy && !yaHubo) {
+      html += `<h3 class="duelos-header">📍 HOY · ${d.fecha}</h3>`;
+      yaHubo = true;
+    } else if (d.fecha_iso !== hoy && !yaPasoHoy) {
+      if (hayHoy) html += `<h3 class="duelos-header" style="margin-top:24px;">📅 Resto de la fase</h3>`;
+      yaPasoHoy = true;
+    }
+    html += renderDueloCard(d);
+  });
+
+  cont.innerHTML = html;
+}
+
+function renderDueloCard(d) {
     const partido = DATA.partidos.find(p => p.num === d.partido_num);
     let estadoTxt = '⏳ Pendiente — partido por jugar';
     let estadoCls = '';
@@ -394,7 +484,206 @@ function renderDuelos() {
         <div class="duelo-status ${estadoCls}">${estadoTxt}</div>
       </div>
     `;
+}
+
+// ========= Capturar (panel admin) =========
+// NOTA: la clave es simple, vive en el código (público). No es seguridad real,
+// solo evita que cualquiera capture resultados accidentalmente. Cámbiala editando esta línea.
+const ADMIN_PASS = "des2026";
+
+function initCapturar() {
+  const btn = document.getElementById('login-btn');
+  const pass = document.getElementById('login-pass');
+  const err = document.getElementById('login-error');
+  if (!btn) return;
+
+  const tryLogin = () => {
+    if (pass.value === ADMIN_PASS) {
+      document.getElementById('capturar-login').style.display = 'none';
+      document.getElementById('capturar-panel').style.display = 'block';
+      err.textContent = '';
+      renderCapturarPanel();
+    } else {
+      err.textContent = '❌ Clave incorrecta';
+      pass.value = '';
+      pass.focus();
+    }
+  };
+  btn.addEventListener('click', tryLogin);
+  pass.addEventListener('keypress', e => { if (e.key === 'Enter') tryLogin(); });
+
+  document.getElementById('btn-logout').addEventListener('click', () => {
+    document.getElementById('capturar-login').style.display = 'block';
+    document.getElementById('capturar-panel').style.display = 'none';
+    document.getElementById('login-pass').value = '';
+  });
+  document.getElementById('capt-filtro').addEventListener('change', renderCapturarPartidos);
+  document.getElementById('btn-download').addEventListener('click', descargarJSON);
+}
+
+// Estado mutable de la captura — clon de DATA que se modifica al ingresar resultados
+let CAPT = null;
+
+function renderCapturarPanel() {
+  // Inicializar clon mutable
+  CAPT = JSON.parse(JSON.stringify(DATA));
+  document.getElementById('capt-campeon').value = CAPT.meta.campeon_real || '';
+  document.getElementById('capt-goleador').value = CAPT.meta.goleador_real || '';
+  document.getElementById('capt-campeon').addEventListener('input', e => {
+    CAPT.meta.campeon_real = e.target.value;
+  });
+  document.getElementById('capt-goleador').addEventListener('input', e => {
+    CAPT.meta.goleador_real = e.target.value;
+  });
+  renderCapturarPartidos();
+}
+
+function renderCapturarPartidos() {
+  const filtro = document.getElementById('capt-filtro').value;
+  const hoy = getHoyIso();
+  let lista = CAPT.partidos;
+  if (filtro === 'hoy') lista = lista.filter(p => p.fecha_iso === hoy);
+  else if (filtro === 'pendientes') lista = lista.filter(p => p.gol_local == null || p.gol_visit == null);
+
+  const cont = document.getElementById('capt-partidos-list');
+  if (lista.length === 0) {
+    cont.innerHTML = `<p style="color:var(--muted);text-align:center;padding:20px;">No hay partidos para mostrar con este filtro.</p>`;
+    return;
+  }
+  cont.innerHTML = lista.map(p => {
+    const hasResult = p.gol_local != null && p.gol_visit != null;
+    return `
+      <div class="capt-partido ${hasResult ? 'has-result' : ''}" data-num="${p.num}">
+        <div class="capt-partido-info">
+          <div class="capt-partido-teams">${escapeHtml(p.local)} vs ${escapeHtml(p.visitante)}</div>
+          <div class="capt-partido-meta">P${p.num} · ${p.fecha} · ${p.hora} · ${escapeHtml(p.grupo)}</div>
+        </div>
+        <div class="capt-score-inputs">
+          <input type="number" min="0" max="20" value="${p.gol_local ?? ''}" data-num="${p.num}" data-side="L">
+          <span class="dash">-</span>
+          <input type="number" min="0" max="20" value="${p.gol_visit ?? ''}" data-num="${p.num}" data-side="V">
+        </div>
+      </div>
+    `;
   }).join('');
+
+  cont.querySelectorAll('input[type=number]').forEach(inp => {
+    inp.addEventListener('input', e => {
+      const num = Number(e.target.dataset.num);
+      const side = e.target.dataset.side;
+      const val = e.target.value === '' ? null : Math.max(0, Math.min(20, parseInt(e.target.value)));
+      const partido = CAPT.partidos.find(x => x.num === num);
+      if (partido) {
+        if (side === 'L') partido.gol_local = val;
+        else partido.gol_visit = val;
+        partido.jugado = partido.gol_local != null && partido.gol_visit != null;
+        // Marcar visualmente
+        const card = e.target.closest('.capt-partido');
+        if (card) card.classList.toggle('has-result', partido.jugado);
+      }
+    });
+  });
+}
+
+// Recalcula puntos completos y descarga el JSON
+function descargarJSON() {
+  // Limpiar valores no-numéricos
+  CAPT.partidos.forEach(p => {
+    if (p.gol_local === '') p.gol_local = null;
+    if (p.gol_visit === '') p.gol_visit = null;
+    p.jugado = p.gol_local != null && p.gol_visit != null;
+  });
+  CAPT.meta.partidos_jugados = CAPT.partidos.filter(p => p.jugado).length;
+  CAPT.meta.campeon_real = (CAPT.meta.campeon_real || '').trim() || null;
+  CAPT.meta.goleador_real = (CAPT.meta.goleador_real || '').trim() || null;
+
+  // Recalcular predicciones y stats
+  const stats = {};
+  CAPT.participantes.forEach(p => {
+    stats[p.slot] = { nombre: p.nombre, pts_partidos: 0, pts_bonus: 0, pts_duelos: 0,
+                      marcadores_exactos: 0, ganadores_correctos: 0, fallos: 0 };
+  });
+
+  CAPT.predicciones.forEach(grupo => {
+    const partido = CAPT.partidos.find(x => x.num === grupo.partido_num);
+    if (!partido) return;
+    grupo.predicciones.forEach(pr => {
+      const pts = calcPtsPartido(pr.local, pr.visitante, partido.gol_local, partido.gol_visit);
+      pr.pts = pts;
+      if (pts === 3) { stats[pr.slot].marcadores_exactos++; stats[pr.slot].pts_partidos += 3; }
+      else if (pts === 1) { stats[pr.slot].ganadores_correctos++; stats[pr.slot].pts_partidos += 1; }
+      else if (pts === 0) { stats[pr.slot].fallos++; }
+    });
+  });
+
+  // Bonus
+  CAPT.bonus.forEach(b => {
+    b.pts_campeon = calcPtsBonus(b.campeon, CAPT.meta.campeon_real, 10);
+    b.pts_goleador = calcPtsBonus(b.goleador, CAPT.meta.goleador_real, 5);
+    if (b.pts_campeon) stats[b.slot].pts_bonus += b.pts_campeon;
+    if (b.pts_goleador) stats[b.slot].pts_bonus += b.pts_goleador;
+  });
+
+  // Duelos
+  CAPT.duelos.forEach(d => {
+    const part = CAPT.partidos.find(x => x.num === d.partido_num);
+    if (part && part.jugado) {
+      const gl = part.gol_local, gv = part.gol_visit;
+      if (gl > gv) { d.pts_a = 2; d.pts_b = 0; d.ganador = 'A'; }
+      else if (gl < gv) { d.pts_a = 0; d.pts_b = 2; d.ganador = 'B'; }
+      else { d.pts_a = 0; d.pts_b = 0; d.ganador = 'empate'; }
+      d.estado = 'ya_jugado';
+      // Sumar
+      const slotA = CAPT.participantes.find(p => p.nombre === d.persona_a)?.slot;
+      const slotB = CAPT.participantes.find(p => p.nombre === d.persona_b)?.slot;
+      if (slotA && d.pts_a) stats[slotA].pts_duelos += d.pts_a;
+      if (slotB && d.pts_b) stats[slotB].pts_duelos += d.pts_b;
+    } else {
+      d.pts_a = d.pts_b = null;
+      d.ganador = null;
+      d.estado = 'pendiente';
+    }
+  });
+
+  // Clasificación
+  CAPT.clasificacion = Object.entries(stats).map(([slot, s]) => ({
+    slot: Number(slot),
+    nombre: s.nombre,
+    pts_total: s.pts_partidos + s.pts_bonus + s.pts_duelos,
+    pts_partidos: s.pts_partidos,
+    pts_bonus: s.pts_bonus,
+    pts_duelos: s.pts_duelos,
+    marcadores_exactos: s.marcadores_exactos,
+    ganadores_correctos: s.ganadores_correctos,
+    fallos: s.fallos,
+  }));
+  CAPT.clasificacion.sort((a, b) => -a.pts_total + b.pts_total || -a.marcadores_exactos + b.marcadores_exactos || a.slot - b.slot);
+  CAPT.clasificacion.forEach((c, i) => c.pos = i + 1);
+
+  // Descargar como archivo
+  const blob = new Blob([JSON.stringify(CAPT, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'data.json';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+
+  alert('✅ data.json descargado. Súbelo al repo de GitHub para que la web se actualice.');
+}
+
+function calcPtsPartido(pl, pv, rl, rv) {
+  if (pl == null || pv == null || rl == null || rv == null) return null;
+  if (pl === rl && pv === rv) return 3;
+  const sp = Math.sign(pl - pv), sr = Math.sign(rl - rv);
+  return sp === sr ? 1 : 0;
+}
+function calcPtsBonus(pred, real, valor) {
+  if (!real || !String(real).trim()) return null;
+  if (!pred || !String(pred).trim()) return 0;
+  return String(pred).trim().toLowerCase() === String(real).trim().toLowerCase() ? valor : 0;
 }
 
 // ========= Util =========

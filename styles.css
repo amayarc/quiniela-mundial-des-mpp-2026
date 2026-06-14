@@ -216,6 +216,31 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
+.partidos-day.day-today {
+  background: linear-gradient(135deg, #FFF6F0 0%, #FFFCEB 100%);
+  border: 2px solid var(--orange);
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 24px;
+  position: relative;
+}
+.partidos-day.day-today h3 {
+  color: var(--orange);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+.duelos-header {
+  color: var(--orange);
+  font-size: 1.1rem;
+  margin: 16px 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+}
+.duelo-card.duelo-hoy {
+  border-left-color: var(--gold);
+  background: linear-gradient(180deg, #FFFCEB 0%, var(--card) 70%);
+}
 .partido-card {
   background: var(--card);
   border-radius: 12px;
@@ -340,103 +365,143 @@ main {
 
 /* ========= Hero secciones Campeón / Goleador ========= */
 .hero-bonus {
-  background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
   color: #fff;
   text-align: center;
-  padding: 32px 20px 28px;
-  border-radius: 18px;
-  margin-bottom: 24px;
-  box-shadow: 0 6px 20px rgba(242, 101, 34, 0.25);
+  padding: 28px 20px 24px;
+  border-radius: 16px;
+  margin-bottom: 16px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
-.hero-bonus::before {
-  content: '⚽';
+.hero-blue { background: linear-gradient(135deg, var(--blue) 0%, var(--blue-light) 100%); }
+.hero-orange { background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%); }
+.hero-deco-l, .hero-deco-r {
   position: absolute;
-  font-size: 8rem;
-  opacity: 0.06;
-  top: -20px;
-  right: -10px;
-  transform: rotate(-20deg);
+  font-size: 6rem;
+  opacity: 0.08;
+  pointer-events: none;
 }
+.hero-deco-l { top: -20px; left: -10px; }
+.hero-deco-r { bottom: -20px; right: -10px; }
+.hero-orange .hero-deco-r { opacity: 0.12; top: -20px; bottom: auto; }
+
 .hero-title {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   opacity: 0.85;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
+  position: relative;
+  z-index: 1;
 }
 .hero-h2 {
-  font-size: 1.8rem !important;
+  font-size: 2rem !important;
   color: #fff !important;
   margin-bottom: 8px !important;
-  line-height: 1.15;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  line-height: 1;
+  letter-spacing: -0.5px;
+  font-weight: 900;
+  position: relative;
+  z-index: 1;
+}
+.hero-h2-sub {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 400;
+  opacity: 0.85;
+  margin-top: 6px;
+  letter-spacing: 0;
 }
 .hero-sub {
   display: inline-block;
   background: var(--gold);
   color: var(--blue);
-  padding: 4px 14px;
+  padding: 5px 14px;
   border-radius: 999px;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  margin-top: 6px;
+  margin-top: 8px;
+  position: relative;
+  z-index: 1;
 }
 
 /* ========= Pie chart Campeón ========= */
-.pie-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 18px;
+.pie-block {
   background: var(--card);
-  padding: 24px;
-  border-radius: 16px;
-  margin-bottom: 22px;
+  border-radius: 14px;
+  padding: 22px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 22px;
+  align-items: center;
+  margin-bottom: 14px;
 }
-.pie {
-  width: 240px;
-  height: 240px;
+.pie-chart {
+  width: 230px;
+  height: 230px;
   border-radius: 50%;
   position: relative;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
-.pie::after {
+.pie-chart::after {
   content: '🏆';
   position: absolute;
   inset: 0;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 3rem;
-  background: #fff;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  margin: auto;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
-.pie-legend {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.pie-legend-item {
+.pie-list { display: flex; flex-direction: column; }
+.pie-row {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-weight: 600;
-  font-size: 0.95rem;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
 }
-.pie-legend-dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 4px;
+.pie-row:last-child { border-bottom: none; }
+.pie-row .dot {
+  width: 16px; height: 16px; border-radius: 4px; flex-shrink: 0;
 }
+.pie-row .flag-big { font-size: 2rem; }
+.pie-row .info { flex: 1; }
+.pie-row .equipo { font-weight: 700; color: var(--blue); font-size: 1.05rem; }
+.pie-row .votos { font-size: 0.82rem; color: var(--muted); }
+.pie-row .pct {
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+/* Personas que votaron por cada campeón */
+.campeon-detalle-title {
+  font-weight: 700;
+  color: var(--blue);
+  margin: 18px 0 10px;
+  font-size: 1.05rem;
+}
+.campeon-detalle-row {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  border-left: 4px solid var(--orange);
+}
+.campeon-detalle-row .flag-md { font-size: 1.5rem; }
+.campeon-detalle-row .equipo-nombre { font-weight: 700; color: var(--blue); min-width: 80px; }
+.campeon-detalle-row .personas { font-size: 0.85rem; color: var(--text); flex: 1; }
 
 /* ========= Cards de votos ========= */
 .votos-grid {
@@ -484,62 +549,116 @@ main {
   color: var(--text);
 }
 
-/* ========= Goleador ranking ========= */
-.goleador-grid {
+/* ========= Goleador podio (top 3) ========= */
+.goleador-podium {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 14px;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  gap: 10px;
+  margin: 22px 0 16px;
+  align-items: end;
 }
-.goleador-card {
-  background: var(--card);
+.podio-spot {
   border-radius: 14px;
-  padding: 18px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  border: 2px solid var(--border);
+  padding: 22px 12px 18px;
+  text-align: center;
   position: relative;
-  overflow: hidden;
+  border-width: 3px;
+  border-style: solid;
 }
-.goleador-card.rank-1 { border-color: var(--gold);   background: linear-gradient(180deg, #FFFCEB 0%, #fff 70%); }
-.goleador-card.rank-2 { border-color: var(--silver); background: linear-gradient(180deg, #F8F8F8 0%, #fff 70%); }
-.goleador-card.rank-3 { border-color: var(--bronze); background: linear-gradient(180deg, #FFF4E6 0%, #fff 70%); }
-.goleador-rank {
+.podio-spot.rank-1 {
+  border-color: var(--gold);
+  background: linear-gradient(180deg, #FFFCEB 0%, #fff 50%);
+  padding-top: 28px;
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.25);
+  border-width: 4px;
+}
+.podio-spot.rank-2 {
+  border-color: var(--silver);
+  background: linear-gradient(180deg, #F8F8F8 0%, #fff 50%);
+}
+.podio-spot.rank-3 {
+  border-color: var(--bronze);
+  background: linear-gradient(180deg, #FFF4E6 0%, #fff 50%);
+}
+.podio-rank {
   position: absolute;
-  top: 10px;
-  right: 14px;
-  background: var(--blue);
-  color: #fff;
-  width: 36px;
-  height: 36px;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 800;
+  font-weight: 900;
   font-size: 1.1rem;
 }
-.goleador-card.rank-1 .goleador-rank { background: var(--gold); color: var(--blue); }
-.goleador-card.rank-2 .goleador-rank { background: var(--silver); color: var(--blue); }
-.goleador-card.rank-3 .goleador-rank { background: var(--bronze); color: #fff; }
-.goleador-flag {
-  font-size: 2.6rem;
-  margin-bottom: 6px;
+.podio-spot.rank-1 .podio-rank {
+  background: var(--gold); color: var(--blue);
+  width: 46px; height: 46px; font-size: 1.3rem;
+  top: -22px;
 }
-.goleador-name {
-  font-size: 1.15rem;
+.podio-spot.rank-2 .podio-rank { background: var(--silver); color: var(--blue); }
+.podio-spot.rank-3 .podio-rank { background: var(--bronze); color: #fff; }
+.podio-flag { font-size: 2.8rem; margin: 6px 0 4px; }
+.podio-spot.rank-1 .podio-flag { font-size: 3.6rem; }
+.podio-name { font-weight: 800; color: var(--blue); font-size: 1rem; }
+.podio-spot.rank-1 .podio-name { font-size: 1.2rem; font-weight: 900; }
+.podio-votes {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
   font-weight: 800;
-  color: var(--blue);
-  margin-bottom: 4px;
+  margin-top: 8px;
 }
-.goleador-votes {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--orange);
-  margin-bottom: 8px;
+.podio-spot.rank-1 .podio-votes {
+  background: var(--gold); color: var(--blue);
+  font-size: 0.95rem; font-weight: 900;
 }
-.goleador-personas {
-  font-size: 0.78rem;
+.podio-spot.rank-2 .podio-votes { background: var(--silver); color: var(--blue); }
+.podio-spot.rank-3 .podio-votes { background: var(--bronze); color: #fff; }
+.podio-personas {
+  font-size: 0.75rem;
   color: var(--muted);
-  line-height: 1.4;
+  margin-top: 6px;
+  line-height: 1.3;
+}
+
+/* Resto de goleadores (4° en adelante) */
+.goleador-resto {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+.resto-card {
+  background: var(--card);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 10px;
+  text-align: center;
+}
+.resto-pos {
+  font-size: 0.72rem;
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.resto-flag { font-size: 1.7rem; }
+.resto-name { font-weight: 700; color: var(--blue); font-size: 0.92rem; margin-top: 2px; }
+.resto-votes {
+  color: var(--orange);
+  font-weight: 800;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+.resto-persona {
+  font-size: 0.72rem;
+  color: var(--muted);
+  margin-top: 4px;
+  line-height: 1.3;
 }
 
 /* ========= Duelos ========= */
@@ -611,6 +730,154 @@ main {
 }
 .regla-card p { font-size: 0.88rem; color: var(--text); }
 
+/* ========= Capturar (panel admin) ========= */
+.login-card {
+  max-width: 360px;
+  margin: 30px auto;
+  background: var(--card);
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border-top: 4px solid var(--orange);
+}
+.login-icon { font-size: 3rem; margin-bottom: 8px; }
+.login-card h3 { color: var(--blue); font-size: 1.2rem; margin-bottom: 4px; }
+.login-card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 18px; }
+.login-card input[type=password] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  text-align: center;
+  letter-spacing: 4px;
+}
+.login-card input[type=password]:focus { outline: none; border-color: var(--orange); }
+.login-error {
+  color: #C44E15 !important;
+  font-size: 0.85rem !important;
+  margin-top: 8px !important;
+  margin-bottom: 0 !important;
+  min-height: 16px;
+}
+.btn-primary {
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+  box-shadow: 0 2px 6px rgba(242, 101, 34, 0.3);
+}
+.btn-primary:hover { background: var(--orange-dark); transform: translateY(-1px); }
+.btn-primary:active { transform: translateY(0); }
+.btn-secondary {
+  background: transparent;
+  color: var(--blue);
+  border: 2px solid var(--blue);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-secondary:hover { background: var(--blue); color: #fff; }
+
+.capt-instructions {
+  background: #FFF6F0;
+  border-left: 4px solid var(--orange);
+  padding: 14px 18px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.capt-instructions ol {
+  margin: 8px 0 0 20px;
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.capt-section {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.capt-section h3 {
+  color: var(--blue);
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+}
+.capt-bonus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+.capt-bonus-grid label {
+  display: block;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+.capt-bonus-grid input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.capt-bonus-grid input:focus { outline: none; border-color: var(--orange); }
+
+/* Lista de partidos en panel captura */
+.capt-partido {
+  background: var(--bg);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+.capt-partido.has-result { background: #E8F5E9; }
+.capt-partido-info { font-size: 0.92rem; }
+.capt-partido-teams { font-weight: 700; color: var(--blue); }
+.capt-partido-meta { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+.capt-score-inputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.capt-score-inputs input {
+  width: 50px;
+  padding: 8px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.capt-score-inputs input:focus { outline: none; border-color: var(--orange); }
+.capt-score-inputs .dash { color: var(--muted); font-weight: 700; }
+
+.capt-actions {
+  position: sticky;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 0%, var(--bg) 30%);
+  padding: 24px 0 12px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 /* ========= Footer ========= */
 footer {
   text-align: center;
@@ -633,4 +900,16 @@ footer {
   .partido-score { font-size: 1rem; min-width: 60px; padding: 4px 10px; }
   main { padding: 16px 12px; }
   .rank-table th, .rank-table td { padding: 8px 6px; font-size: 0.85rem; }
+  .hero-h2 { font-size: 1.5rem !important; }
+  .hero-h2-sub { font-size: 0.95rem; }
+  /* Pie chart vertical en móvil */
+  .pie-block { grid-template-columns: 1fr; gap: 16px; }
+  .pie-chart { width: 200px; height: 200px; margin: 0 auto; }
+  .pie-chart::after { width: 80px; height: 80px; font-size: 2.5rem; }
+  /* Podio más compacto */
+  .podio-flag { font-size: 2.2rem; }
+  .podio-spot.rank-1 .podio-flag { font-size: 2.8rem; }
+  .podio-name { font-size: 0.85rem; }
+  .podio-spot.rank-1 .podio-name { font-size: 1rem; }
+  .podio-personas { display: none; }
 }
