@@ -6,7 +6,16 @@
     "total_partidos": 72,
     "partidos_jugados": 9,
     "campeon_real": null,
-    "goleador_real": null
+    "goleador_real": null,
+    "bota_de_oro": {
+      "goles": 2,
+      "lideres": [
+        {"nombre": "Folarin Balogun", "pais": "Estados Unidos"},
+        {"nombre": "Kai Havertz", "pais": "Alemania"},
+        {"nombre": "Yasin Ayari", "pais": "Suecia"}
+      ],
+      "actualizado": "2026-06-14"
+    }
   },
   "participantes": [
     {

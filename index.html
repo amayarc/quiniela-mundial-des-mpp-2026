@@ -105,6 +105,8 @@
         <h2 class="hero-h2">MÁXIMO GOLEADOR <span class="hero-h2-sub">del Mundial 2026?</span></h2>
         <p class="hero-sub">⚽ BONUS · 5 PTS</p>
       </div>
+      <div id="bota-actual" class="bota-actual"></div>
+      <div class="votos-divider">📊 Votos de los participantes</div>
       <div id="goleador-podium" class="goleador-podium"></div>
       <div id="goleador-resto" class="goleador-resto"></div>
     </section>
@@ -154,6 +156,25 @@
               <label>Máximo goleador real</label>
               <input type="text" id="capt-goleador" placeholder="Ej: Kylian Mbappé">
             </div>
+          </div>
+        </div>
+
+        <div class="capt-section">
+          <h3>🥾 Bota de Oro · Líder actual</h3>
+          <p style="font-size:0.85rem;color:var(--muted);margin-bottom:12px;">Pon los jugadores que actualmente lideran la tabla de goleadores del Mundial. Si son varios empatados, escríbelos todos.</p>
+          <div class="capt-bonus-grid">
+            <div>
+              <label>Goles del líder</label>
+              <input type="number" id="capt-bota-goles" min="0" max="20" placeholder="Ej: 2">
+            </div>
+            <div>
+              <label>Fecha de actualización</label>
+              <input type="date" id="capt-bota-fecha">
+            </div>
+          </div>
+          <div style="margin-top:12px;">
+            <label style="font-weight:600;color:var(--text);display:block;margin-bottom:6px;font-size:0.9rem;">Líderes (uno por línea, formato <code>Nombre - País</code>)</label>
+            <textarea id="capt-bota-lideres" rows="4" placeholder="Folarin Balogun - Estados Unidos&#10;Kai Havertz - Alemania&#10;Yasin Ayari - Suecia"></textarea>
           </div>
         </div>
 

@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           }
           DATA.meta.campeon_real  = fb.campeon_real  || null;
           DATA.meta.goleador_real = fb.goleador_real || null;
+          if (fb.bota_de_oro !== undefined) DATA.meta.bota_de_oro = fb.bota_de_oro;
         }
       }
     } catch (fbErr) {
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderPartidos();
     renderPorPersona();
     renderCampeon();
+    renderBotaActual();
     renderGoleador();
     renderDuelos();
     initCapturar();
@@ -146,7 +148,7 @@ const FLAGS = {
   'Francia': '🇫🇷',
   'Brasil': '🇧🇷',
   'Noruega': '🇳🇴',
-  'Inglaterra': '🏴󠁧󠁢󠁥󠁮󠁧󠁿', 'Reino Unido': '🇬🇧',
+  'Inglaterra': 'ENG', 'Escocia': 'SCO', 'Gales': 'WAL', 'Reino Unido': '🇬🇧',
   'Argentina': '🇦🇷',
   'México': '🇲🇽', 'Mexico': '🇲🇽',
   'Portugal': '🇵🇹',
@@ -483,6 +485,36 @@ function renderCampeon() {
   `;
 }
 
+// ========= Bota de Oro · líder actual real =========
+function renderBotaActual() {
+  const cont = document.getElementById('bota-actual');
+  if (!cont) return;
+  const bota = DATA.meta.bota_de_oro;
+  if (!bota || !bota.lideres || bota.lideres.length === 0 || !bota.goles) {
+    cont.innerHTML = '';
+    return;
+  }
+  const n = bota.lideres.length;
+  const statsTxt = n > 1 ? `${n} jugadores empatados` : '1 jugador en la cima';
+  cont.innerHTML = `
+    <div class="bota-actual-head">
+      <span class="bota-actual-title">🥇 Bota de Oro · Líder real del Mundial</span>
+      <span class="bota-actual-stats">${statsTxt}</span>
+    </div>
+    <div class="bota-actual-goles">
+      ${bota.goles} <small>gol${bota.goles === 1 ? '' : 'es'}</small>
+    </div>
+    ${bota.lideres.map(l => `
+      <div class="bota-lider-row">
+        <span class="bota-lider-flag">${flag(l.pais)}</span>
+        <span class="bota-lider-name">${escapeHtml(l.nombre)}</span>
+        <span class="bota-lider-pais">${escapeHtml(l.pais)}</span>
+      </div>
+    `).join('')}
+    ${bota.actualizado ? `<div class="bota-actual-footer">Actualizado: ${escapeHtml(bota.actualizado)}</div>` : ''}
+  `;
+}
+
 // ========= Goleador =========
 function renderGoleador() {
   const groups = {};
@@ -661,11 +693,28 @@ async function guardarEnFirebase() {
   CAPT.meta.campeon_real = (CAPT.meta.campeon_real || '').trim() || null;
   CAPT.meta.goleador_real = (CAPT.meta.goleador_real || '').trim() || null;
 
-  // Payload: solo resultados, campeón y goleador
+  // Procesar Bota de Oro desde inputs
+  const goles = parseInt(document.getElementById('capt-bota-goles').value);
+  const fecha = document.getElementById('capt-bota-fecha').value || null;
+  const lideresTxt = document.getElementById('capt-bota-lideres').value || '';
+  const lideres = lideresTxt.split('\n')
+    .map(line => line.trim())
+    .filter(line => line.length > 0)
+    .map(line => {
+      const m = line.split(/\s*[-–—]\s*/);
+      return { nombre: (m[0] || '').trim(), pais: (m[1] || '').trim() };
+    })
+    .filter(l => l.nombre);
+  CAPT.meta.bota_de_oro = (goles && lideres.length > 0) ? {
+    goles, lideres, actualizado: fecha
+  } : null;
+
+  // Payload: solo resultados, bonus y bota de oro
   const payload = {
     resultados:    {},
     campeon_real:  CAPT.meta.campeon_real,
     goleador_real: CAPT.meta.goleador_real,
+    bota_de_oro:   CAPT.meta.bota_de_oro,
   };
   CAPT.partidos.forEach(p => {
     if (p.gol_local != null && p.gol_visit != null) {
@@ -705,6 +754,14 @@ function renderCapturarPanel() {
   document.getElementById('capt-goleador').addEventListener('input', e => {
     CAPT.meta.goleador_real = e.target.value;
   });
+
+  // Bota de Oro
+  const bota = CAPT.meta.bota_de_oro || {};
+  document.getElementById('capt-bota-goles').value = bota.goles || '';
+  document.getElementById('capt-bota-fecha').value = bota.actualizado || '';
+  const lideresTxt = (bota.lideres || []).map(l => `${l.nombre} - ${l.pais}`).join('\n');
+  document.getElementById('capt-bota-lideres').value = lideresTxt;
+
   renderCapturarPartidos();
 }
 
