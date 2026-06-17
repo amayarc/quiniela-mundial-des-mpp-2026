@@ -564,6 +564,11 @@ function renderBotaActual() {
     </div>
     <div class="bota-table-wrap">
       <table class="bota-table">
+        <colgroup>
+          <col class="c-pais">
+          <col class="c-jugador">
+          <col class="c-goles">
+        </colgroup>
         <thead>
           <tr>
             <th class="c">País</th>
@@ -575,7 +580,7 @@ function renderBotaActual() {
           ${lideres.map(l => `
             <tr>
               <td class="col-pais">${flag(l.pais)}</td>
-              <td class="col-jugador">${escapeHtml(l.nombre)}${l.tieneVoto ? ' <span title="Tiene voto en la quiniela" style="color:#5C3B00;">⭐</span>' : ''}</td>
+              <td class="col-jugador">${escapeHtml(l.nombre)}${l.tieneVoto ? '<span class="bota-star" title="Tiene voto en la quiniela">★</span>' : ''}</td>
               <td class="col-goles">${l.goles}</td>
             </tr>
           `).join('')}
