@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (fb) {
           if (fb.resultados) {
             Object.entries(fb.resultados).forEach(([num, r]) => {
+              if (!r) return; // ignorar índices null (Firebase array)
               const p = DATA.partidos.find(x => x.num === Number(num));
               if (p) {
                 p.gol_local = (r.l != null) ? Number(r.l) : null;
