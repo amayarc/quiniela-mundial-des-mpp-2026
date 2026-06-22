@@ -760,8 +760,39 @@ async function guardarEnFirebase() {
   const msg = document.getElementById('save-msg');
   const btn = document.getElementById('btn-save');
   btn.disabled = true;
-  msg.textContent = '⏳ Guardando en la nube...';
+  msg.textContent = '⏳ Sincronizando con la nube...';
   msg.className = 'save-msg pending';
+
+  // PROTECCIÓN: re-leer Firebase antes de guardar, para preservar datos
+  // que estén en la nube pero que el panel no tenga cargados (por ejemplo
+  // si Firebase falló al cargar la página o si otro dispositivo guardó).
+  let remote = null;
+  try {
+    const fbRes = await fetch(FIREBASE_URL + '/live.json?_=' + Date.now());
+    if (!fbRes.ok) throw new Error('HTTP ' + fbRes.status);
+    remote = await fbRes.json();
+  } catch (e) {
+    msg.textContent = '❌ No se pudo conectar a la nube. Revisa tu internet y reintenta.';
+    msg.className = 'save-msg err';
+    btn.disabled = false;
+    return;
+  }
+
+  // Mergear: si Firebase tiene resultados que CAPT no tiene marcados, agregarlos
+  if (remote && remote.resultados) {
+    const entries = Array.isArray(remote.resultados)
+      ? remote.resultados.map((r, i) => [String(i), r])
+      : Object.entries(remote.resultados);
+    entries.forEach(([num, r]) => {
+      if (!r) return;
+      const p = CAPT.partidos.find(x => x.num === Number(num));
+      if (p && p.gol_local == null && p.gol_visit == null) {
+        p.gol_local = (r.l != null) ? Number(r.l) : null;
+        p.gol_visit = (r.v != null) ? Number(r.v) : null;
+        p.jugado = p.gol_local != null && p.gol_visit != null;
+      }
+    });
+  }
 
   // Limpiar valores
   CAPT.partidos.forEach(p => {
