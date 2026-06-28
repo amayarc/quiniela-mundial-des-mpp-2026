@@ -1,21 +1,22 @@
 {
   "meta": {
     "nombre": "Quiniela Mundial DES & MPP 2026",
-    "fase": "Fase de Grupos",
+    "fase": "Grupos + Dieciseisavos",
+    "fases": [
+      {
+        "key": "grupos",
+        "label": "Fase de Grupos"
+      },
+      {
+        "key": "r32",
+        "label": "Dieciseisavos (R32)"
+      }
+    ],
     "total_participantes": 21,
-    "total_partidos": 72,
-    "partidos_jugados": 9,
+    "total_partidos": 88,
+    "partidos_jugados": 11,
     "campeon_real": null,
-    "goleador_real": null,
-    "bota_de_oro": {
-      "goles": 2,
-      "lideres": [
-        {"nombre": "Folarin Balogun", "pais": "Estados Unidos"},
-        {"nombre": "Kai Havertz", "pais": "Alemania"},
-        {"nombre": "Yasin Ayari", "pais": "Suecia"}
-      ],
-      "actualizado": "2026-06-14"
-    }
+    "goleador_real": null
   },
   "participantes": [
     {
@@ -106,6 +107,8 @@
   "partidos": [
     {
       "num": 1,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo A",
       "fecha": "Jue 11 Jun",
       "fecha_iso": "2026-06-11",
@@ -119,6 +122,8 @@
     },
     {
       "num": 2,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo A",
       "fecha": "Jue 11 Jun",
       "fecha_iso": "2026-06-11",
@@ -132,6 +137,8 @@
     },
     {
       "num": 3,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo B",
       "fecha": "Vie 12 Jun",
       "fecha_iso": "2026-06-12",
@@ -145,6 +152,8 @@
     },
     {
       "num": 4,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo D",
       "fecha": "Vie 12 Jun",
       "fecha_iso": "2026-06-12",
@@ -158,6 +167,8 @@
     },
     {
       "num": 5,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo B",
       "fecha": "Sáb 13 Jun",
       "fecha_iso": "2026-06-13",
@@ -171,6 +182,8 @@
     },
     {
       "num": 6,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo C",
       "fecha": "Sáb 13 Jun",
       "fecha_iso": "2026-06-13",
@@ -184,6 +197,8 @@
     },
     {
       "num": 7,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo C",
       "fecha": "Sáb 13 Jun",
       "fecha_iso": "2026-06-13",
@@ -197,6 +212,8 @@
     },
     {
       "num": 8,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo D",
       "fecha": "Sáb 13 Jun",
       "fecha_iso": "2026-06-13",
@@ -210,6 +227,8 @@
     },
     {
       "num": 9,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo E",
       "fecha": "Dom 14 Jun",
       "fecha_iso": "2026-06-14",
@@ -223,6 +242,8 @@
     },
     {
       "num": 10,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo F",
       "fecha": "Dom 14 Jun",
       "fecha_iso": "2026-06-14",
@@ -230,12 +251,14 @@
       "estadio": "Estadio Dallas",
       "local": "Países Bajos",
       "visitante": "Japón",
-      "gol_local": null,
-      "gol_visit": null,
-      "jugado": false
+      "gol_local": 2,
+      "gol_visit": 2,
+      "jugado": true
     },
     {
       "num": 11,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo E",
       "fecha": "Dom 14 Jun",
       "fecha_iso": "2026-06-14",
@@ -243,12 +266,14 @@
       "estadio": "Estadio Filadelfia",
       "local": "Costa de Marfil",
       "visitante": "Ecuador",
-      "gol_local": null,
-      "gol_visit": null,
-      "jugado": false
+      "gol_local": 1,
+      "gol_visit": 0,
+      "jugado": true
     },
     {
       "num": 12,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo F",
       "fecha": "Dom 14 Jun",
       "fecha_iso": "2026-06-14",
@@ -262,6 +287,8 @@
     },
     {
       "num": 13,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo H",
       "fecha": "Lun 15 Jun",
       "fecha_iso": "2026-06-15",
@@ -275,6 +302,8 @@
     },
     {
       "num": 14,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo G",
       "fecha": "Lun 15 Jun",
       "fecha_iso": "2026-06-15",
@@ -288,6 +317,8 @@
     },
     {
       "num": 15,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo H",
       "fecha": "Lun 15 Jun",
       "fecha_iso": "2026-06-15",
@@ -301,6 +332,8 @@
     },
     {
       "num": 16,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo G",
       "fecha": "Lun 15 Jun",
       "fecha_iso": "2026-06-15",
@@ -314,6 +347,8 @@
     },
     {
       "num": 17,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo I",
       "fecha": "Mar 16 Jun",
       "fecha_iso": "2026-06-16",
@@ -327,6 +362,8 @@
     },
     {
       "num": 18,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo I",
       "fecha": "Mar 16 Jun",
       "fecha_iso": "2026-06-16",
@@ -340,6 +377,8 @@
     },
     {
       "num": 19,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo J",
       "fecha": "Mar 16 Jun",
       "fecha_iso": "2026-06-16",
@@ -353,6 +392,8 @@
     },
     {
       "num": 20,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo J",
       "fecha": "Mar 16 Jun",
       "fecha_iso": "2026-06-16",
@@ -366,6 +407,8 @@
     },
     {
       "num": 21,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo K",
       "fecha": "Mié 17 Jun",
       "fecha_iso": "2026-06-17",
@@ -379,6 +422,8 @@
     },
     {
       "num": 22,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo L",
       "fecha": "Mié 17 Jun",
       "fecha_iso": "2026-06-17",
@@ -392,6 +437,8 @@
     },
     {
       "num": 23,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo L",
       "fecha": "Mié 17 Jun",
       "fecha_iso": "2026-06-17",
@@ -405,6 +452,8 @@
     },
     {
       "num": 24,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo K",
       "fecha": "Mié 17 Jun",
       "fecha_iso": "2026-06-17",
@@ -418,6 +467,8 @@
     },
     {
       "num": 25,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo A",
       "fecha": "Jue 18 Jun",
       "fecha_iso": "2026-06-18",
@@ -431,6 +482,8 @@
     },
     {
       "num": 26,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo B",
       "fecha": "Jue 18 Jun",
       "fecha_iso": "2026-06-18",
@@ -444,6 +497,8 @@
     },
     {
       "num": 27,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo B",
       "fecha": "Jue 18 Jun",
       "fecha_iso": "2026-06-18",
@@ -457,6 +512,8 @@
     },
     {
       "num": 28,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo A",
       "fecha": "Jue 18 Jun",
       "fecha_iso": "2026-06-18",
@@ -470,6 +527,8 @@
     },
     {
       "num": 29,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo D",
       "fecha": "Vie 19 Jun",
       "fecha_iso": "2026-06-19",
@@ -483,6 +542,8 @@
     },
     {
       "num": 30,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo C",
       "fecha": "Vie 19 Jun",
       "fecha_iso": "2026-06-19",
@@ -496,6 +557,8 @@
     },
     {
       "num": 31,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo C",
       "fecha": "Vie 19 Jun",
       "fecha_iso": "2026-06-19",
@@ -509,6 +572,8 @@
     },
     {
       "num": 32,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo D",
       "fecha": "Vie 19 Jun",
       "fecha_iso": "2026-06-19",
@@ -522,6 +587,8 @@
     },
     {
       "num": 33,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo F",
       "fecha": "Sáb 20 Jun",
       "fecha_iso": "2026-06-20",
@@ -535,6 +602,8 @@
     },
     {
       "num": 34,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo E",
       "fecha": "Sáb 20 Jun",
       "fecha_iso": "2026-06-20",
@@ -548,6 +617,8 @@
     },
     {
       "num": 35,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo E",
       "fecha": "Sáb 20 Jun",
       "fecha_iso": "2026-06-20",
@@ -561,6 +632,8 @@
     },
     {
       "num": 36,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo F",
       "fecha": "Sáb 20 Jun",
       "fecha_iso": "2026-06-20",
@@ -574,6 +647,8 @@
     },
     {
       "num": 37,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo H",
       "fecha": "Dom 21 Jun",
       "fecha_iso": "2026-06-21",
@@ -587,6 +662,8 @@
     },
     {
       "num": 38,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo G",
       "fecha": "Dom 21 Jun",
       "fecha_iso": "2026-06-21",
@@ -600,6 +677,8 @@
     },
     {
       "num": 39,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo H",
       "fecha": "Dom 21 Jun",
       "fecha_iso": "2026-06-21",
@@ -613,6 +692,8 @@
     },
     {
       "num": 40,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo G",
       "fecha": "Dom 21 Jun",
       "fecha_iso": "2026-06-21",
@@ -626,6 +707,8 @@
     },
     {
       "num": 41,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo J",
       "fecha": "Lun 22 Jun",
       "fecha_iso": "2026-06-22",
@@ -639,6 +722,8 @@
     },
     {
       "num": 42,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo I",
       "fecha": "Lun 22 Jun",
       "fecha_iso": "2026-06-22",
@@ -652,6 +737,8 @@
     },
     {
       "num": 43,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo I",
       "fecha": "Lun 22 Jun",
       "fecha_iso": "2026-06-22",
@@ -665,6 +752,8 @@
     },
     {
       "num": 44,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo J",
       "fecha": "Lun 22 Jun",
       "fecha_iso": "2026-06-22",
@@ -678,6 +767,8 @@
     },
     {
       "num": 45,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo K",
       "fecha": "Mar 23 Jun",
       "fecha_iso": "2026-06-23",
@@ -691,6 +782,8 @@
     },
     {
       "num": 46,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo L",
       "fecha": "Mar 23 Jun",
       "fecha_iso": "2026-06-23",
@@ -704,6 +797,8 @@
     },
     {
       "num": 47,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo L",
       "fecha": "Mar 23 Jun",
       "fecha_iso": "2026-06-23",
@@ -717,6 +812,8 @@
     },
     {
       "num": 48,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo K",
       "fecha": "Mar 23 Jun",
       "fecha_iso": "2026-06-23",
@@ -730,6 +827,8 @@
     },
     {
       "num": 49,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo B",
       "fecha": "Mié 24 Jun",
       "fecha_iso": "2026-06-24",
@@ -743,6 +842,8 @@
     },
     {
       "num": 50,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo B",
       "fecha": "Mié 24 Jun",
       "fecha_iso": "2026-06-24",
@@ -756,6 +857,8 @@
     },
     {
       "num": 51,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo C",
       "fecha": "Mié 24 Jun",
       "fecha_iso": "2026-06-24",
@@ -769,6 +872,8 @@
     },
     {
       "num": 52,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo C",
       "fecha": "Mié 24 Jun",
       "fecha_iso": "2026-06-24",
@@ -782,6 +887,8 @@
     },
     {
       "num": 53,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo A",
       "fecha": "Mié 24 Jun",
       "fecha_iso": "2026-06-24",
@@ -795,6 +902,8 @@
     },
     {
       "num": 54,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo A",
       "fecha": "Mié 24 Jun",
       "fecha_iso": "2026-06-24",
@@ -808,6 +917,8 @@
     },
     {
       "num": 55,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo E",
       "fecha": "Jue 25 Jun",
       "fecha_iso": "2026-06-25",
@@ -821,6 +932,8 @@
     },
     {
       "num": 56,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo E",
       "fecha": "Jue 25 Jun",
       "fecha_iso": "2026-06-25",
@@ -834,6 +947,8 @@
     },
     {
       "num": 57,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo F",
       "fecha": "Jue 25 Jun",
       "fecha_iso": "2026-06-25",
@@ -847,6 +962,8 @@
     },
     {
       "num": 58,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo F",
       "fecha": "Jue 25 Jun",
       "fecha_iso": "2026-06-25",
@@ -860,6 +977,8 @@
     },
     {
       "num": 59,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo D",
       "fecha": "Jue 25 Jun",
       "fecha_iso": "2026-06-25",
@@ -873,6 +992,8 @@
     },
     {
       "num": 60,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo D",
       "fecha": "Jue 25 Jun",
       "fecha_iso": "2026-06-25",
@@ -886,6 +1007,8 @@
     },
     {
       "num": 61,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo I",
       "fecha": "Vie 26 Jun",
       "fecha_iso": "2026-06-26",
@@ -899,6 +1022,8 @@
     },
     {
       "num": 62,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo I",
       "fecha": "Vie 26 Jun",
       "fecha_iso": "2026-06-26",
@@ -912,6 +1037,8 @@
     },
     {
       "num": 63,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo H",
       "fecha": "Vie 26 Jun",
       "fecha_iso": "2026-06-26",
@@ -925,6 +1052,8 @@
     },
     {
       "num": 64,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo H",
       "fecha": "Vie 26 Jun",
       "fecha_iso": "2026-06-26",
@@ -938,6 +1067,8 @@
     },
     {
       "num": 65,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo G",
       "fecha": "Vie 26 Jun",
       "fecha_iso": "2026-06-26",
@@ -951,6 +1082,8 @@
     },
     {
       "num": 66,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo G",
       "fecha": "Vie 26 Jun",
       "fecha_iso": "2026-06-26",
@@ -964,6 +1097,8 @@
     },
     {
       "num": 67,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo L",
       "fecha": "Sáb 27 Jun",
       "fecha_iso": "2026-06-27",
@@ -977,6 +1112,8 @@
     },
     {
       "num": 68,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo L",
       "fecha": "Sáb 27 Jun",
       "fecha_iso": "2026-06-27",
@@ -990,6 +1127,8 @@
     },
     {
       "num": 69,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo K",
       "fecha": "Sáb 27 Jun",
       "fecha_iso": "2026-06-27",
@@ -1003,6 +1142,8 @@
     },
     {
       "num": 70,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo K",
       "fecha": "Sáb 27 Jun",
       "fecha_iso": "2026-06-27",
@@ -1016,6 +1157,8 @@
     },
     {
       "num": 71,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo J",
       "fecha": "Sáb 27 Jun",
       "fecha_iso": "2026-06-27",
@@ -1029,6 +1172,8 @@
     },
     {
       "num": 72,
+      "fase": "grupos",
+      "fase_label": "Fase de Grupos",
       "grupo": "Grupo J",
       "fecha": "Sáb 27 Jun",
       "fecha_iso": "2026-06-27",
@@ -1039,11 +1184,252 @@
       "gol_local": null,
       "gol_visit": null,
       "jugado": false
+    },
+    {
+      "num": 73,
+      "fase": "r32",
+      "fase_label": "Dieciseisavos (R32)",
+      "grupo": "R32",
+      "fecha": "Dom 28 Jun",
+      "fecha_iso": "2026-06-28",
+      "hora": "13:00",
+      "estadio": "SoFi Stadium · Los Ángeles",
+      "local": "Sudáfrica",
+      "visitante": "Canadá",
+      "gol_local": null,
+      "gol_visit": null,
+      "jugado": false
+    },
+    {
+      "num": 74,
+      "fase": "r32",
+      "fase_label": "Dieciseisavos (R32)",
+      "grupo": "R32",
+      "fecha": "Lun 29 Jun",
+      "fecha_iso": "2026-06-29",
+      "hora": "11:00",
+      "estadio": "NRG Stadium · Houston",
+      "local": "Brasil",
+      "visitante": "Japón",
+      "gol_local": null,
+      "gol_visit": null,
+      "jugado": false
+    },
+    {
+      "num": 75,
+      "fase": "r32",
+      "fase_label": "Dieciseisavos (R32)",
+      "grupo": "R32",
+      "fecha": "Lun 29 Jun",
+      "fecha_iso": "2026-06-29",
+      "hora": "14:30",
+      "estadio": "Gillette Stadium · Boston",
+      "local": "Alemania",
+      "visitante": "Paraguay",
+      "gol_local": null,
+      "gol_visit": null,
+      "jugado": false
+    },
+    {
+      "num": 76,
+      "fase": "r32",
+      "fase_label": "Dieciseisavos (R32)",
+      "grupo": "R32",
+      "fecha": "Lun 29 Jun",
+      "fecha_iso": "2026-06-29",
+      "hora": "19:00",
+      "estadio": "Estadio BBVA · Monterrey",
+      "local": "Países Bajos",
+      "visitante": "Marruecos",
+      "gol_local": null,
+      "gol_visit": null,
+      "jugado": false
+    },
+    {
+      "num": 77,
+      "fase": "r32",
+      "fase_label": "Dieciseisavos (R32)",
+      "grupo": "R32",
+      "fecha": "Mar 30 Jun",
+      "fecha_iso": "2026-06-30",
+      "hora": "11:00",
+      "estadio": "AT&T Stadium · Dallas",
+      "local": "Costa de Marfil",
+      "visitante": "Noruega",
+      "gol_local": null,
+      "gol_visit": null,
+      "jugado": false
+    },
+    {
+      "num": 78,
+      "fase": "r32",
+      "fase_label": "Dieciseisavos (R32)",
+      "grupo": "R32",
+      "fecha": "Mar 30 Jun",
+      "fecha_iso": "2026-06-30",
+      "hora": "15:00",
+      "estadio": "MetLife Stadium · Nueva York/NJ",
+      "local": "Francia",
+      "visitante": "Suecia",
+      "gol_local": null,
+      "gol_visit": null,
+      "jugado": false
+    },
+    {
+      "num": 79,
+      "fase": "r32",
+      "fase_label": "Dieciseisavos (R32)",
+      "grupo": "R32",
+      "fecha": "Mar 30 Jun",
+      "fecha_iso": "2026-06-30",
+      "hora": "19:00",
+      "estadio": "Estadio Azteca · CDMX",
+      "local": "México",
+      "visitante": "Ecuador",
+      "gol_local": null,
+      "gol_visit": null,
+      "jugado": false
+    },
+    {
+      "num": 80,
+      "fase": "r32",
+      "fase_label": "Dieciseisavos (R32)",
+      "grupo": "R32",
+      "fecha": "Mié 1 Jul",
+      "fecha_iso": "2026-07-01",
+      "hora": "10:00",
+      "estadio": "Mercedes-Benz Stadium · Atlanta",
+      "local": "Inglaterra",
+      "visitante": "RD Congo",
+      "gol_local": null,
+      "gol_visit": null,
+      "jugado": false
+    },
+    {
+      "num": 81,
+      "fase": "r32",
+      "fase_label": "Dieciseisavos (R32)",
+      "grupo": "R32",
+      "fecha": "Mié 1 Jul",
+      "fecha_iso": "2026-07-01",
+      "hora": "14:00",
+      "estadio": "Lumen Field · Seattle",
+      "local": "Bélgica",
+      "visitante": "Senegal",
+      "gol_local": null,
+      "gol_visit": null,
+      "jugado": false
+    },
+    {
+      "num": 82,
+      "fase": "r32",
+      "fase_label": "Dieciseisavos (R32)",
+      "grupo": "R32",
+      "fecha": "Mié 1 Jul",
+      "fecha_iso": "2026-07-01",
+      "hora": "18:00",
+      "estadio": "Levi's Stadium · San Francisco",
+      "local": "Estados Unidos",
+      "visitante": "Bosnia y Herzegovina",
+      "gol_local": null,
+      "gol_visit": null,
+      "jugado": false
+    },
+    {
+      "num": 83,
+      "fase": "r32",
+      "fase_label": "Dieciseisavos (R32)",
+      "grupo": "R32",
+      "fecha": "Jue 2 Jul",
+      "fecha_iso": "2026-07-02",
+      "hora": "13:00",
+      "estadio": "SoFi Stadium · Los Ángeles",
+      "local": "España",
+      "visitante": "Austria",
+      "gol_local": null,
+      "gol_visit": null,
+      "jugado": false
+    },
+    {
+      "num": 84,
+      "fase": "r32",
+      "fase_label": "Dieciseisavos (R32)",
+      "grupo": "R32",
+      "fecha": "Jue 2 Jul",
+      "fecha_iso": "2026-07-02",
+      "hora": "17:00",
+      "estadio": "BMO Field · Toronto",
+      "local": "Portugal",
+      "visitante": "Croacia",
+      "gol_local": null,
+      "gol_visit": null,
+      "jugado": false
+    },
+    {
+      "num": 85,
+      "fase": "r32",
+      "fase_label": "Dieciseisavos (R32)",
+      "grupo": "R32",
+      "fecha": "Jue 2 Jul",
+      "fecha_iso": "2026-07-02",
+      "hora": "21:00",
+      "estadio": "BC Place · Vancouver",
+      "local": "Suiza",
+      "visitante": "Argelia",
+      "gol_local": null,
+      "gol_visit": null,
+      "jugado": false
+    },
+    {
+      "num": 86,
+      "fase": "r32",
+      "fase_label": "Dieciseisavos (R32)",
+      "grupo": "R32",
+      "fecha": "Vie 3 Jul",
+      "fecha_iso": "2026-07-03",
+      "hora": "12:00",
+      "estadio": "AT&T Stadium · Dallas",
+      "local": "Australia",
+      "visitante": "Egipto",
+      "gol_local": null,
+      "gol_visit": null,
+      "jugado": false
+    },
+    {
+      "num": 87,
+      "fase": "r32",
+      "fase_label": "Dieciseisavos (R32)",
+      "grupo": "R32",
+      "fecha": "Vie 3 Jul",
+      "fecha_iso": "2026-07-03",
+      "hora": "16:00",
+      "estadio": "Hard Rock Stadium · Miami",
+      "local": "Argentina",
+      "visitante": "Cabo Verde",
+      "gol_local": null,
+      "gol_visit": null,
+      "jugado": false
+    },
+    {
+      "num": 88,
+      "fase": "r32",
+      "fase_label": "Dieciseisavos (R32)",
+      "grupo": "R32",
+      "fecha": "Vie 3 Jul",
+      "fecha_iso": "2026-07-03",
+      "hora": "19:30",
+      "estadio": "Arrowhead Stadium · Kansas City",
+      "local": "Colombia",
+      "visitante": "Ghana",
+      "gol_local": null,
+      "gol_visit": null,
+      "jugado": false
     }
   ],
   "predicciones": [
     {
       "partido_num": 1,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -1196,6 +1582,7 @@
     },
     {
       "partido_num": 2,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -1348,6 +1735,7 @@
     },
     {
       "partido_num": 3,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -1500,6 +1888,7 @@
     },
     {
       "partido_num": 4,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -1652,6 +2041,7 @@
     },
     {
       "partido_num": 5,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -1804,6 +2194,7 @@
     },
     {
       "partido_num": 6,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -1956,6 +2347,7 @@
     },
     {
       "partido_num": 7,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -2108,6 +2500,7 @@
     },
     {
       "partido_num": 8,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -2260,6 +2653,7 @@
     },
     {
       "partido_num": 9,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -2412,310 +2806,313 @@
     },
     {
       "partido_num": 10,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
           "nombre": "Alejandro De Keijser",
           "local": 2,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 2,
           "nombre": "Hernán Treviño Cantú",
           "local": 1,
           "visitante": 1,
-          "pts": null
+          "pts": 1
         },
         {
           "slot": 3,
           "nombre": "Paola Salazar",
           "local": 2,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 4,
           "nombre": "Amaya Rivas",
           "local": 2,
           "visitante": 2,
-          "pts": null
+          "pts": 3
         },
         {
           "slot": 5,
           "nombre": "Amaya Rivas 2",
           "local": 1,
           "visitante": 1,
-          "pts": null
+          "pts": 1
         },
         {
           "slot": 6,
           "nombre": "Iván López",
           "local": 2,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 7,
           "nombre": "Cecilia Macyshyn",
           "local": 2,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 8,
           "nombre": "Cesar Chavez",
           "local": 2,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 9,
           "nombre": "Daniela Dávila",
           "local": 2,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 10,
           "nombre": "Martín Chávez",
           "local": 2,
           "visitante": 2,
-          "pts": null
+          "pts": 3
         },
         {
           "slot": 11,
           "nombre": "Adriana Silva",
           "local": 2,
           "visitante": 2,
-          "pts": null
+          "pts": 3
         },
         {
           "slot": 12,
           "nombre": "Fátima Elizarrarás",
           "local": 1,
           "visitante": 0,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 13,
           "nombre": "Hiram Canseco",
           "local": 2,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 14,
           "nombre": "Ronald Hidalgo",
           "local": 2,
           "visitante": 2,
-          "pts": null
+          "pts": 3
         },
         {
           "slot": 15,
           "nombre": "Alan Márquez",
           "local": 3,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 16,
           "nombre": "Lucia Dosal",
           "local": 0,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 17,
           "nombre": "Luz Guajardo",
           "local": 2,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 18,
           "nombre": "Mayra Cuevas",
           "local": 2,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 19,
           "nombre": "Sofía Maldonado",
           "local": 3,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 20,
           "nombre": "Joel Valenzuela",
           "local": 2,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 21,
           "nombre": "Jorge Flores",
           "local": 1,
           "visitante": 2,
-          "pts": null
+          "pts": 0
         }
       ]
     },
     {
       "partido_num": 11,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
           "nombre": "Alejandro De Keijser",
           "local": 2,
           "visitante": 1,
-          "pts": null
+          "pts": 1
         },
         {
           "slot": 2,
           "nombre": "Hernán Treviño Cantú",
           "local": 0,
           "visitante": 0,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 3,
           "nombre": "Paola Salazar",
           "local": 1,
           "visitante": 2,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 4,
           "nombre": "Amaya Rivas",
           "local": 0,
           "visitante": 0,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 5,
           "nombre": "Amaya Rivas 2",
           "local": 0,
           "visitante": 0,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 6,
           "nombre": "Iván López",
           "local": 1,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 7,
           "nombre": "Cecilia Macyshyn",
           "local": 2,
           "visitante": 1,
-          "pts": null
+          "pts": 1
         },
         {
           "slot": 8,
           "nombre": "Cesar Chavez",
           "local": 1,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 9,
           "nombre": "Daniela Dávila",
           "local": 1,
           "visitante": 3,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 10,
           "nombre": "Martín Chávez",
           "local": 2,
           "visitante": 1,
-          "pts": null
+          "pts": 1
         },
         {
           "slot": 11,
           "nombre": "Adriana Silva",
           "local": 1,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 12,
           "nombre": "Fátima Elizarrarás",
           "local": 1,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 13,
           "nombre": "Hiram Canseco",
           "local": 1,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 14,
           "nombre": "Ronald Hidalgo",
           "local": 1,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 15,
           "nombre": "Alan Márquez",
           "local": 0,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 16,
           "nombre": "Lucia Dosal",
           "local": 1,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 17,
           "nombre": "Luz Guajardo",
           "local": 1,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 18,
           "nombre": "Mayra Cuevas",
           "local": 1,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 19,
           "nombre": "Sofía Maldonado",
           "local": 2,
           "visitante": 1,
-          "pts": null
+          "pts": 1
         },
         {
           "slot": 20,
           "nombre": "Joel Valenzuela",
           "local": 1,
           "visitante": 1,
-          "pts": null
+          "pts": 0
         },
         {
           "slot": 21,
           "nombre": "Jorge Flores",
           "local": 1,
           "visitante": 2,
-          "pts": null
+          "pts": 0
         }
       ]
     },
     {
       "partido_num": 12,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -2868,6 +3265,7 @@
     },
     {
       "partido_num": 13,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -3020,6 +3418,7 @@
     },
     {
       "partido_num": 14,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -3172,6 +3571,7 @@
     },
     {
       "partido_num": 15,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -3324,6 +3724,7 @@
     },
     {
       "partido_num": 16,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -3476,6 +3877,7 @@
     },
     {
       "partido_num": 17,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -3628,6 +4030,7 @@
     },
     {
       "partido_num": 18,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -3780,6 +4183,7 @@
     },
     {
       "partido_num": 19,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -3932,6 +4336,7 @@
     },
     {
       "partido_num": 20,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -4084,6 +4489,7 @@
     },
     {
       "partido_num": 21,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -4236,6 +4642,7 @@
     },
     {
       "partido_num": 22,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -4388,6 +4795,7 @@
     },
     {
       "partido_num": 23,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -4540,6 +4948,7 @@
     },
     {
       "partido_num": 24,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -4692,6 +5101,7 @@
     },
     {
       "partido_num": 25,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -4844,6 +5254,7 @@
     },
     {
       "partido_num": 26,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -4996,6 +5407,7 @@
     },
     {
       "partido_num": 27,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -5148,6 +5560,7 @@
     },
     {
       "partido_num": 28,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -5300,6 +5713,7 @@
     },
     {
       "partido_num": 29,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -5452,6 +5866,7 @@
     },
     {
       "partido_num": 30,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -5604,6 +6019,7 @@
     },
     {
       "partido_num": 31,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -5756,6 +6172,7 @@
     },
     {
       "partido_num": 32,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -5908,6 +6325,7 @@
     },
     {
       "partido_num": 33,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -6060,6 +6478,7 @@
     },
     {
       "partido_num": 34,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -6212,6 +6631,7 @@
     },
     {
       "partido_num": 35,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -6364,6 +6784,7 @@
     },
     {
       "partido_num": 36,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -6516,6 +6937,7 @@
     },
     {
       "partido_num": 37,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -6668,6 +7090,7 @@
     },
     {
       "partido_num": 38,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -6820,6 +7243,7 @@
     },
     {
       "partido_num": 39,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -6972,6 +7396,7 @@
     },
     {
       "partido_num": 40,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -7124,6 +7549,7 @@
     },
     {
       "partido_num": 41,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -7276,6 +7702,7 @@
     },
     {
       "partido_num": 42,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -7428,6 +7855,7 @@
     },
     {
       "partido_num": 43,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -7580,6 +8008,7 @@
     },
     {
       "partido_num": 44,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -7732,6 +8161,7 @@
     },
     {
       "partido_num": 45,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -7884,6 +8314,7 @@
     },
     {
       "partido_num": 46,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -8036,6 +8467,7 @@
     },
     {
       "partido_num": 47,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -8188,6 +8620,7 @@
     },
     {
       "partido_num": 48,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -8340,6 +8773,7 @@
     },
     {
       "partido_num": 49,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -8492,6 +8926,7 @@
     },
     {
       "partido_num": 50,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -8644,6 +9079,7 @@
     },
     {
       "partido_num": 51,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -8796,6 +9232,7 @@
     },
     {
       "partido_num": 52,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -8948,6 +9385,7 @@
     },
     {
       "partido_num": 53,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -9100,6 +9538,7 @@
     },
     {
       "partido_num": 54,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -9252,6 +9691,7 @@
     },
     {
       "partido_num": 55,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -9404,6 +9844,7 @@
     },
     {
       "partido_num": 56,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -9556,6 +9997,7 @@
     },
     {
       "partido_num": 57,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -9708,6 +10150,7 @@
     },
     {
       "partido_num": 58,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -9860,6 +10303,7 @@
     },
     {
       "partido_num": 59,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -10012,6 +10456,7 @@
     },
     {
       "partido_num": 60,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -10164,6 +10609,7 @@
     },
     {
       "partido_num": 61,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -10316,6 +10762,7 @@
     },
     {
       "partido_num": 62,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -10468,6 +10915,7 @@
     },
     {
       "partido_num": 63,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -10620,6 +11068,7 @@
     },
     {
       "partido_num": 64,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -10772,6 +11221,7 @@
     },
     {
       "partido_num": 65,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -10924,6 +11374,7 @@
     },
     {
       "partido_num": 66,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -11076,6 +11527,7 @@
     },
     {
       "partido_num": 67,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -11228,6 +11680,7 @@
     },
     {
       "partido_num": 68,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -11380,6 +11833,7 @@
     },
     {
       "partido_num": 69,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -11532,6 +11986,7 @@
     },
     {
       "partido_num": 70,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -11684,6 +12139,7 @@
     },
     {
       "partido_num": 71,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -11836,6 +12292,7 @@
     },
     {
       "partido_num": 72,
+      "fase": "grupos",
       "predicciones": [
         {
           "slot": 1,
@@ -11982,6 +12439,2454 @@
           "nombre": "Jorge Flores",
           "local": 0,
           "visitante": 2,
+          "pts": null
+        }
+      ]
+    },
+    {
+      "partido_num": 73,
+      "fase": "r32",
+      "predicciones": [
+        {
+          "slot": 1,
+          "nombre": "Alejandro De Keijser",
+          "local": 1,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 2,
+          "nombre": "Hernán Treviño Cantú",
+          "local": 0,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 3,
+          "nombre": "Paola Salazar",
+          "local": 1,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 4,
+          "nombre": "Amaya Rivas",
+          "local": 1,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 5,
+          "nombre": "Amaya Rivas 2",
+          "local": 1,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 6,
+          "nombre": "Iván López",
+          "local": 0,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 7,
+          "nombre": "Cecilia Macyshyn",
+          "local": 0,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 8,
+          "nombre": "Cesar Chavez",
+          "local": 2,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 9,
+          "nombre": "Daniela Dávila",
+          "local": 1,
+          "visitante": 3,
+          "pts": null
+        },
+        {
+          "slot": 10,
+          "nombre": "Martín Chávez",
+          "local": 1,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 11,
+          "nombre": "Adriana Silva",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 12,
+          "nombre": "Fátima Elizarrarás",
+          "local": 1,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 13,
+          "nombre": "Hiram Canseco",
+          "local": 1,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 14,
+          "nombre": "Ronald Hidalgo",
+          "local": 1,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 15,
+          "nombre": "Alan Márquez",
+          "local": 1,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 16,
+          "nombre": "Lucia Dosal",
+          "local": 0,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 17,
+          "nombre": "Luz Guajardo",
+          "local": 0,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 18,
+          "nombre": "Mayra Cuevas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 19,
+          "nombre": "Sofía Maldonado",
+          "local": 0,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 20,
+          "nombre": "Joel Valenzuela",
+          "local": 1,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 21,
+          "nombre": "Jorge Flores",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        }
+      ]
+    },
+    {
+      "partido_num": 74,
+      "fase": "r32",
+      "predicciones": [
+        {
+          "slot": 1,
+          "nombre": "Alejandro De Keijser",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 2,
+          "nombre": "Hernán Treviño Cantú",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 3,
+          "nombre": "Paola Salazar",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 4,
+          "nombre": "Amaya Rivas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 5,
+          "nombre": "Amaya Rivas 2",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 6,
+          "nombre": "Iván López",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 7,
+          "nombre": "Cecilia Macyshyn",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 8,
+          "nombre": "Cesar Chavez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 9,
+          "nombre": "Daniela Dávila",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 10,
+          "nombre": "Martín Chávez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 11,
+          "nombre": "Adriana Silva",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 12,
+          "nombre": "Fátima Elizarrarás",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 13,
+          "nombre": "Hiram Canseco",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 14,
+          "nombre": "Ronald Hidalgo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 15,
+          "nombre": "Alan Márquez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 16,
+          "nombre": "Lucia Dosal",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 17,
+          "nombre": "Luz Guajardo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 18,
+          "nombre": "Mayra Cuevas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 19,
+          "nombre": "Sofía Maldonado",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 20,
+          "nombre": "Joel Valenzuela",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 21,
+          "nombre": "Jorge Flores",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        }
+      ]
+    },
+    {
+      "partido_num": 75,
+      "fase": "r32",
+      "predicciones": [
+        {
+          "slot": 1,
+          "nombre": "Alejandro De Keijser",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 2,
+          "nombre": "Hernán Treviño Cantú",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 3,
+          "nombre": "Paola Salazar",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 4,
+          "nombre": "Amaya Rivas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 5,
+          "nombre": "Amaya Rivas 2",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 6,
+          "nombre": "Iván López",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 7,
+          "nombre": "Cecilia Macyshyn",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 8,
+          "nombre": "Cesar Chavez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 9,
+          "nombre": "Daniela Dávila",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 10,
+          "nombre": "Martín Chávez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 11,
+          "nombre": "Adriana Silva",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 12,
+          "nombre": "Fátima Elizarrarás",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 13,
+          "nombre": "Hiram Canseco",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 14,
+          "nombre": "Ronald Hidalgo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 15,
+          "nombre": "Alan Márquez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 16,
+          "nombre": "Lucia Dosal",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 17,
+          "nombre": "Luz Guajardo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 18,
+          "nombre": "Mayra Cuevas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 19,
+          "nombre": "Sofía Maldonado",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 20,
+          "nombre": "Joel Valenzuela",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 21,
+          "nombre": "Jorge Flores",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        }
+      ]
+    },
+    {
+      "partido_num": 76,
+      "fase": "r32",
+      "predicciones": [
+        {
+          "slot": 1,
+          "nombre": "Alejandro De Keijser",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 2,
+          "nombre": "Hernán Treviño Cantú",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 3,
+          "nombre": "Paola Salazar",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 4,
+          "nombre": "Amaya Rivas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 5,
+          "nombre": "Amaya Rivas 2",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 6,
+          "nombre": "Iván López",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 7,
+          "nombre": "Cecilia Macyshyn",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 8,
+          "nombre": "Cesar Chavez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 9,
+          "nombre": "Daniela Dávila",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 10,
+          "nombre": "Martín Chávez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 11,
+          "nombre": "Adriana Silva",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 12,
+          "nombre": "Fátima Elizarrarás",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 13,
+          "nombre": "Hiram Canseco",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 14,
+          "nombre": "Ronald Hidalgo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 15,
+          "nombre": "Alan Márquez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 16,
+          "nombre": "Lucia Dosal",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 17,
+          "nombre": "Luz Guajardo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 18,
+          "nombre": "Mayra Cuevas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 19,
+          "nombre": "Sofía Maldonado",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 20,
+          "nombre": "Joel Valenzuela",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 21,
+          "nombre": "Jorge Flores",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        }
+      ]
+    },
+    {
+      "partido_num": 77,
+      "fase": "r32",
+      "predicciones": [
+        {
+          "slot": 1,
+          "nombre": "Alejandro De Keijser",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 2,
+          "nombre": "Hernán Treviño Cantú",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 3,
+          "nombre": "Paola Salazar",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 4,
+          "nombre": "Amaya Rivas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 5,
+          "nombre": "Amaya Rivas 2",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 6,
+          "nombre": "Iván López",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 7,
+          "nombre": "Cecilia Macyshyn",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 8,
+          "nombre": "Cesar Chavez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 9,
+          "nombre": "Daniela Dávila",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 10,
+          "nombre": "Martín Chávez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 11,
+          "nombre": "Adriana Silva",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 12,
+          "nombre": "Fátima Elizarrarás",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 13,
+          "nombre": "Hiram Canseco",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 14,
+          "nombre": "Ronald Hidalgo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 15,
+          "nombre": "Alan Márquez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 16,
+          "nombre": "Lucia Dosal",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 17,
+          "nombre": "Luz Guajardo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 18,
+          "nombre": "Mayra Cuevas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 19,
+          "nombre": "Sofía Maldonado",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 20,
+          "nombre": "Joel Valenzuela",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 21,
+          "nombre": "Jorge Flores",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        }
+      ]
+    },
+    {
+      "partido_num": 78,
+      "fase": "r32",
+      "predicciones": [
+        {
+          "slot": 1,
+          "nombre": "Alejandro De Keijser",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 2,
+          "nombre": "Hernán Treviño Cantú",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 3,
+          "nombre": "Paola Salazar",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 4,
+          "nombre": "Amaya Rivas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 5,
+          "nombre": "Amaya Rivas 2",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 6,
+          "nombre": "Iván López",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 7,
+          "nombre": "Cecilia Macyshyn",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 8,
+          "nombre": "Cesar Chavez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 9,
+          "nombre": "Daniela Dávila",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 10,
+          "nombre": "Martín Chávez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 11,
+          "nombre": "Adriana Silva",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 12,
+          "nombre": "Fátima Elizarrarás",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 13,
+          "nombre": "Hiram Canseco",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 14,
+          "nombre": "Ronald Hidalgo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 15,
+          "nombre": "Alan Márquez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 16,
+          "nombre": "Lucia Dosal",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 17,
+          "nombre": "Luz Guajardo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 18,
+          "nombre": "Mayra Cuevas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 19,
+          "nombre": "Sofía Maldonado",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 20,
+          "nombre": "Joel Valenzuela",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 21,
+          "nombre": "Jorge Flores",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        }
+      ]
+    },
+    {
+      "partido_num": 79,
+      "fase": "r32",
+      "predicciones": [
+        {
+          "slot": 1,
+          "nombre": "Alejandro De Keijser",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 2,
+          "nombre": "Hernán Treviño Cantú",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 3,
+          "nombre": "Paola Salazar",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 4,
+          "nombre": "Amaya Rivas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 5,
+          "nombre": "Amaya Rivas 2",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 6,
+          "nombre": "Iván López",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 7,
+          "nombre": "Cecilia Macyshyn",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 8,
+          "nombre": "Cesar Chavez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 9,
+          "nombre": "Daniela Dávila",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 10,
+          "nombre": "Martín Chávez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 11,
+          "nombre": "Adriana Silva",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 12,
+          "nombre": "Fátima Elizarrarás",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 13,
+          "nombre": "Hiram Canseco",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 14,
+          "nombre": "Ronald Hidalgo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 15,
+          "nombre": "Alan Márquez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 16,
+          "nombre": "Lucia Dosal",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 17,
+          "nombre": "Luz Guajardo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 18,
+          "nombre": "Mayra Cuevas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 19,
+          "nombre": "Sofía Maldonado",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 20,
+          "nombre": "Joel Valenzuela",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 21,
+          "nombre": "Jorge Flores",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        }
+      ]
+    },
+    {
+      "partido_num": 80,
+      "fase": "r32",
+      "predicciones": [
+        {
+          "slot": 1,
+          "nombre": "Alejandro De Keijser",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 2,
+          "nombre": "Hernán Treviño Cantú",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 3,
+          "nombre": "Paola Salazar",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 4,
+          "nombre": "Amaya Rivas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 5,
+          "nombre": "Amaya Rivas 2",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 6,
+          "nombre": "Iván López",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 7,
+          "nombre": "Cecilia Macyshyn",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 8,
+          "nombre": "Cesar Chavez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 9,
+          "nombre": "Daniela Dávila",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 10,
+          "nombre": "Martín Chávez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 11,
+          "nombre": "Adriana Silva",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 12,
+          "nombre": "Fátima Elizarrarás",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 13,
+          "nombre": "Hiram Canseco",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 14,
+          "nombre": "Ronald Hidalgo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 15,
+          "nombre": "Alan Márquez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 16,
+          "nombre": "Lucia Dosal",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 17,
+          "nombre": "Luz Guajardo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 18,
+          "nombre": "Mayra Cuevas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 19,
+          "nombre": "Sofía Maldonado",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 20,
+          "nombre": "Joel Valenzuela",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 21,
+          "nombre": "Jorge Flores",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        }
+      ]
+    },
+    {
+      "partido_num": 81,
+      "fase": "r32",
+      "predicciones": [
+        {
+          "slot": 1,
+          "nombre": "Alejandro De Keijser",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 2,
+          "nombre": "Hernán Treviño Cantú",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 3,
+          "nombre": "Paola Salazar",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 4,
+          "nombre": "Amaya Rivas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 5,
+          "nombre": "Amaya Rivas 2",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 6,
+          "nombre": "Iván López",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 7,
+          "nombre": "Cecilia Macyshyn",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 8,
+          "nombre": "Cesar Chavez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 9,
+          "nombre": "Daniela Dávila",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 10,
+          "nombre": "Martín Chávez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 11,
+          "nombre": "Adriana Silva",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 12,
+          "nombre": "Fátima Elizarrarás",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 13,
+          "nombre": "Hiram Canseco",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 14,
+          "nombre": "Ronald Hidalgo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 15,
+          "nombre": "Alan Márquez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 16,
+          "nombre": "Lucia Dosal",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 17,
+          "nombre": "Luz Guajardo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 18,
+          "nombre": "Mayra Cuevas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 19,
+          "nombre": "Sofía Maldonado",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 20,
+          "nombre": "Joel Valenzuela",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 21,
+          "nombre": "Jorge Flores",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        }
+      ]
+    },
+    {
+      "partido_num": 82,
+      "fase": "r32",
+      "predicciones": [
+        {
+          "slot": 1,
+          "nombre": "Alejandro De Keijser",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 2,
+          "nombre": "Hernán Treviño Cantú",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 3,
+          "nombre": "Paola Salazar",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 4,
+          "nombre": "Amaya Rivas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 5,
+          "nombre": "Amaya Rivas 2",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 6,
+          "nombre": "Iván López",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 7,
+          "nombre": "Cecilia Macyshyn",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 8,
+          "nombre": "Cesar Chavez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 9,
+          "nombre": "Daniela Dávila",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 10,
+          "nombre": "Martín Chávez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 11,
+          "nombre": "Adriana Silva",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 12,
+          "nombre": "Fátima Elizarrarás",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 13,
+          "nombre": "Hiram Canseco",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 14,
+          "nombre": "Ronald Hidalgo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 15,
+          "nombre": "Alan Márquez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 16,
+          "nombre": "Lucia Dosal",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 17,
+          "nombre": "Luz Guajardo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 18,
+          "nombre": "Mayra Cuevas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 19,
+          "nombre": "Sofía Maldonado",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 20,
+          "nombre": "Joel Valenzuela",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 21,
+          "nombre": "Jorge Flores",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        }
+      ]
+    },
+    {
+      "partido_num": 83,
+      "fase": "r32",
+      "predicciones": [
+        {
+          "slot": 1,
+          "nombre": "Alejandro De Keijser",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 2,
+          "nombre": "Hernán Treviño Cantú",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 3,
+          "nombre": "Paola Salazar",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 4,
+          "nombre": "Amaya Rivas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 5,
+          "nombre": "Amaya Rivas 2",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 6,
+          "nombre": "Iván López",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 7,
+          "nombre": "Cecilia Macyshyn",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 8,
+          "nombre": "Cesar Chavez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 9,
+          "nombre": "Daniela Dávila",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 10,
+          "nombre": "Martín Chávez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 11,
+          "nombre": "Adriana Silva",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 12,
+          "nombre": "Fátima Elizarrarás",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 13,
+          "nombre": "Hiram Canseco",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 14,
+          "nombre": "Ronald Hidalgo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 15,
+          "nombre": "Alan Márquez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 16,
+          "nombre": "Lucia Dosal",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 17,
+          "nombre": "Luz Guajardo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 18,
+          "nombre": "Mayra Cuevas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 19,
+          "nombre": "Sofía Maldonado",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 20,
+          "nombre": "Joel Valenzuela",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 21,
+          "nombre": "Jorge Flores",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        }
+      ]
+    },
+    {
+      "partido_num": 84,
+      "fase": "r32",
+      "predicciones": [
+        {
+          "slot": 1,
+          "nombre": "Alejandro De Keijser",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 2,
+          "nombre": "Hernán Treviño Cantú",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 3,
+          "nombre": "Paola Salazar",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 4,
+          "nombre": "Amaya Rivas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 5,
+          "nombre": "Amaya Rivas 2",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 6,
+          "nombre": "Iván López",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 7,
+          "nombre": "Cecilia Macyshyn",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 8,
+          "nombre": "Cesar Chavez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 9,
+          "nombre": "Daniela Dávila",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 10,
+          "nombre": "Martín Chávez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 11,
+          "nombre": "Adriana Silva",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 12,
+          "nombre": "Fátima Elizarrarás",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 13,
+          "nombre": "Hiram Canseco",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 14,
+          "nombre": "Ronald Hidalgo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 15,
+          "nombre": "Alan Márquez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 16,
+          "nombre": "Lucia Dosal",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 17,
+          "nombre": "Luz Guajardo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 18,
+          "nombre": "Mayra Cuevas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 19,
+          "nombre": "Sofía Maldonado",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 20,
+          "nombre": "Joel Valenzuela",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 21,
+          "nombre": "Jorge Flores",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        }
+      ]
+    },
+    {
+      "partido_num": 85,
+      "fase": "r32",
+      "predicciones": [
+        {
+          "slot": 1,
+          "nombre": "Alejandro De Keijser",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 2,
+          "nombre": "Hernán Treviño Cantú",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 3,
+          "nombre": "Paola Salazar",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 4,
+          "nombre": "Amaya Rivas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 5,
+          "nombre": "Amaya Rivas 2",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 6,
+          "nombre": "Iván López",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 7,
+          "nombre": "Cecilia Macyshyn",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 8,
+          "nombre": "Cesar Chavez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 9,
+          "nombre": "Daniela Dávila",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 10,
+          "nombre": "Martín Chávez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 11,
+          "nombre": "Adriana Silva",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 12,
+          "nombre": "Fátima Elizarrarás",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 13,
+          "nombre": "Hiram Canseco",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 14,
+          "nombre": "Ronald Hidalgo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 15,
+          "nombre": "Alan Márquez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 16,
+          "nombre": "Lucia Dosal",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 17,
+          "nombre": "Luz Guajardo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 18,
+          "nombre": "Mayra Cuevas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 19,
+          "nombre": "Sofía Maldonado",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 20,
+          "nombre": "Joel Valenzuela",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 21,
+          "nombre": "Jorge Flores",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        }
+      ]
+    },
+    {
+      "partido_num": 86,
+      "fase": "r32",
+      "predicciones": [
+        {
+          "slot": 1,
+          "nombre": "Alejandro De Keijser",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 2,
+          "nombre": "Hernán Treviño Cantú",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 3,
+          "nombre": "Paola Salazar",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 4,
+          "nombre": "Amaya Rivas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 5,
+          "nombre": "Amaya Rivas 2",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 6,
+          "nombre": "Iván López",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 7,
+          "nombre": "Cecilia Macyshyn",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 8,
+          "nombre": "Cesar Chavez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 9,
+          "nombre": "Daniela Dávila",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 10,
+          "nombre": "Martín Chávez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 11,
+          "nombre": "Adriana Silva",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 12,
+          "nombre": "Fátima Elizarrarás",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 13,
+          "nombre": "Hiram Canseco",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 14,
+          "nombre": "Ronald Hidalgo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 15,
+          "nombre": "Alan Márquez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 16,
+          "nombre": "Lucia Dosal",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 17,
+          "nombre": "Luz Guajardo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 18,
+          "nombre": "Mayra Cuevas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 19,
+          "nombre": "Sofía Maldonado",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 20,
+          "nombre": "Joel Valenzuela",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 21,
+          "nombre": "Jorge Flores",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        }
+      ]
+    },
+    {
+      "partido_num": 87,
+      "fase": "r32",
+      "predicciones": [
+        {
+          "slot": 1,
+          "nombre": "Alejandro De Keijser",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 2,
+          "nombre": "Hernán Treviño Cantú",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 3,
+          "nombre": "Paola Salazar",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 4,
+          "nombre": "Amaya Rivas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 5,
+          "nombre": "Amaya Rivas 2",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 6,
+          "nombre": "Iván López",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 7,
+          "nombre": "Cecilia Macyshyn",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 8,
+          "nombre": "Cesar Chavez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 9,
+          "nombre": "Daniela Dávila",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 10,
+          "nombre": "Martín Chávez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 11,
+          "nombre": "Adriana Silva",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 12,
+          "nombre": "Fátima Elizarrarás",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 13,
+          "nombre": "Hiram Canseco",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 14,
+          "nombre": "Ronald Hidalgo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 15,
+          "nombre": "Alan Márquez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 16,
+          "nombre": "Lucia Dosal",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 17,
+          "nombre": "Luz Guajardo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 18,
+          "nombre": "Mayra Cuevas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 19,
+          "nombre": "Sofía Maldonado",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 20,
+          "nombre": "Joel Valenzuela",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 21,
+          "nombre": "Jorge Flores",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        }
+      ]
+    },
+    {
+      "partido_num": 88,
+      "fase": "r32",
+      "predicciones": [
+        {
+          "slot": 1,
+          "nombre": "Alejandro De Keijser",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 2,
+          "nombre": "Hernán Treviño Cantú",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 3,
+          "nombre": "Paola Salazar",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 4,
+          "nombre": "Amaya Rivas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 5,
+          "nombre": "Amaya Rivas 2",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 6,
+          "nombre": "Iván López",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 7,
+          "nombre": "Cecilia Macyshyn",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 8,
+          "nombre": "Cesar Chavez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 9,
+          "nombre": "Daniela Dávila",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 10,
+          "nombre": "Martín Chávez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 11,
+          "nombre": "Adriana Silva",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 12,
+          "nombre": "Fátima Elizarrarás",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 13,
+          "nombre": "Hiram Canseco",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 14,
+          "nombre": "Ronald Hidalgo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 15,
+          "nombre": "Alan Márquez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 16,
+          "nombre": "Lucia Dosal",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 17,
+          "nombre": "Luz Guajardo",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 18,
+          "nombre": "Mayra Cuevas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 19,
+          "nombre": "Sofía Maldonado",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 20,
+          "nombre": "Joel Valenzuela",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 21,
+          "nombre": "Jorge Flores",
+          "local": null,
+          "visitante": null,
           "pts": null
         }
       ]
@@ -12165,10 +15070,10 @@
       "visitante": "Ecuador",
       "persona_a": "Martín Chávez",
       "persona_b": "Daniela Dávila",
-      "pts_a": null,
-      "pts_b": null,
-      "ganador": null,
-      "estado": "pendiente"
+      "pts_a": 2,
+      "pts_b": 0,
+      "ganador": "A",
+      "estado": "ya_jugado"
     },
     {
       "num": 2,
@@ -12177,10 +15082,10 @@
       "visitante": "Ecuador",
       "persona_a": "Sofía Maldonado",
       "persona_b": "Paola Salazar",
-      "pts_a": null,
-      "pts_b": null,
-      "ganador": null,
-      "estado": "pendiente"
+      "pts_a": 2,
+      "pts_b": 0,
+      "ganador": "A",
+      "estado": "ya_jugado"
     },
     {
       "num": 3,
@@ -12413,16 +15318,32 @@
   ],
   "clasificacion": [
     {
+      "slot": 10,
+      "nombre": "Martín Chávez",
+      "pts_total": 15,
+      "pts_partidos": 13,
+      "pts_bonus": 0,
+      "pts_duelos": 2,
+      "pts_grupos": 13,
+      "pts_r32": 0,
+      "marcadores_exactos": 3,
+      "ganadores_correctos": 4,
+      "fallos": 4,
+      "pos": 1
+    },
+    {
       "slot": 12,
       "nombre": "Fátima Elizarrarás",
       "pts_total": 14,
       "pts_partidos": 14,
       "pts_bonus": 0,
       "pts_duelos": 0,
+      "pts_grupos": 14,
+      "pts_r32": 0,
       "marcadores_exactos": 3,
       "ganadores_correctos": 5,
-      "fallos": 1,
-      "pos": 1
+      "fallos": 3,
+      "pos": 2
     },
     {
       "slot": 16,
@@ -12431,22 +15352,68 @@
       "pts_partidos": 11,
       "pts_bonus": 0,
       "pts_duelos": 0,
+      "pts_grupos": 11,
+      "pts_r32": 0,
       "marcadores_exactos": 3,
       "ganadores_correctos": 2,
-      "fallos": 4,
-      "pos": 2
+      "fallos": 6,
+      "pos": 3
     },
     {
-      "slot": 10,
-      "nombre": "Martín Chávez",
+      "slot": 11,
+      "nombre": "Adriana Silva",
+      "pts_total": 10,
+      "pts_partidos": 10,
+      "pts_bonus": 0,
+      "pts_duelos": 0,
+      "pts_grupos": 10,
+      "pts_r32": 0,
+      "marcadores_exactos": 2,
+      "ganadores_correctos": 4,
+      "fallos": 5,
+      "pos": 4
+    },
+    {
+      "slot": 14,
+      "nombre": "Ronald Hidalgo",
+      "pts_total": 10,
+      "pts_partidos": 10,
+      "pts_bonus": 0,
+      "pts_duelos": 0,
+      "pts_grupos": 10,
+      "pts_r32": 0,
+      "marcadores_exactos": 1,
+      "ganadores_correctos": 7,
+      "fallos": 3,
+      "pos": 5
+    },
+    {
+      "slot": 4,
+      "nombre": "Amaya Rivas",
       "pts_total": 9,
       "pts_partidos": 9,
       "pts_bonus": 0,
       "pts_duelos": 0,
+      "pts_grupos": 9,
+      "pts_r32": 0,
       "marcadores_exactos": 2,
       "ganadores_correctos": 3,
-      "fallos": 4,
-      "pos": 3
+      "fallos": 6,
+      "pos": 6
+    },
+    {
+      "slot": 1,
+      "nombre": "Alejandro De Keijser",
+      "pts_total": 7,
+      "pts_partidos": 7,
+      "pts_bonus": 0,
+      "pts_duelos": 0,
+      "pts_grupos": 7,
+      "pts_r32": 0,
+      "marcadores_exactos": 1,
+      "ganadores_correctos": 4,
+      "fallos": 6,
+      "pos": 7
     },
     {
       "slot": 3,
@@ -12455,10 +15422,26 @@
       "pts_partidos": 7,
       "pts_bonus": 0,
       "pts_duelos": 0,
+      "pts_grupos": 7,
+      "pts_r32": 0,
       "marcadores_exactos": 1,
       "ganadores_correctos": 4,
-      "fallos": 4,
-      "pos": 4
+      "fallos": 6,
+      "pos": 8
+    },
+    {
+      "slot": 5,
+      "nombre": "Amaya Rivas 2",
+      "pts_total": 7,
+      "pts_partidos": 7,
+      "pts_bonus": 0,
+      "pts_duelos": 0,
+      "pts_grupos": 7,
+      "pts_r32": 0,
+      "marcadores_exactos": 1,
+      "ganadores_correctos": 4,
+      "fallos": 6,
+      "pos": 9
     },
     {
       "slot": 6,
@@ -12467,22 +15450,26 @@
       "pts_partidos": 7,
       "pts_bonus": 0,
       "pts_duelos": 0,
+      "pts_grupos": 7,
+      "pts_r32": 0,
       "marcadores_exactos": 1,
       "ganadores_correctos": 4,
-      "fallos": 4,
-      "pos": 5
+      "fallos": 6,
+      "pos": 10
     },
     {
-      "slot": 11,
-      "nombre": "Adriana Silva",
+      "slot": 7,
+      "nombre": "Cecilia Macyshyn",
       "pts_total": 7,
       "pts_partidos": 7,
       "pts_bonus": 0,
       "pts_duelos": 0,
+      "pts_grupos": 7,
+      "pts_r32": 0,
       "marcadores_exactos": 1,
       "ganadores_correctos": 4,
-      "fallos": 4,
-      "pos": 6
+      "fallos": 6,
+      "pos": 11
     },
     {
       "slot": 13,
@@ -12491,10 +15478,12 @@
       "pts_partidos": 7,
       "pts_bonus": 0,
       "pts_duelos": 0,
+      "pts_grupos": 7,
+      "pts_r32": 0,
       "marcadores_exactos": 1,
       "ganadores_correctos": 4,
-      "fallos": 4,
-      "pos": 7
+      "fallos": 6,
+      "pos": 12
     },
     {
       "slot": 17,
@@ -12503,70 +15492,40 @@
       "pts_partidos": 7,
       "pts_bonus": 0,
       "pts_duelos": 0,
+      "pts_grupos": 7,
+      "pts_r32": 0,
       "marcadores_exactos": 1,
       "ganadores_correctos": 4,
-      "fallos": 4,
-      "pos": 8
-    },
-    {
-      "slot": 14,
-      "nombre": "Ronald Hidalgo",
-      "pts_total": 7,
-      "pts_partidos": 7,
-      "pts_bonus": 0,
-      "pts_duelos": 0,
-      "marcadores_exactos": 0,
-      "ganadores_correctos": 7,
-      "fallos": 2,
-      "pos": 9
-    },
-    {
-      "slot": 1,
-      "nombre": "Alejandro De Keijser",
-      "pts_total": 6,
-      "pts_partidos": 6,
-      "pts_bonus": 0,
-      "pts_duelos": 0,
-      "marcadores_exactos": 1,
-      "ganadores_correctos": 3,
-      "fallos": 5,
-      "pos": 10
-    },
-    {
-      "slot": 4,
-      "nombre": "Amaya Rivas",
-      "pts_total": 6,
-      "pts_partidos": 6,
-      "pts_bonus": 0,
-      "pts_duelos": 0,
-      "marcadores_exactos": 1,
-      "ganadores_correctos": 3,
-      "fallos": 5,
-      "pos": 11
-    },
-    {
-      "slot": 5,
-      "nombre": "Amaya Rivas 2",
-      "pts_total": 6,
-      "pts_partidos": 6,
-      "pts_bonus": 0,
-      "pts_duelos": 0,
-      "marcadores_exactos": 1,
-      "ganadores_correctos": 3,
-      "fallos": 5,
-      "pos": 12
-    },
-    {
-      "slot": 7,
-      "nombre": "Cecilia Macyshyn",
-      "pts_total": 6,
-      "pts_partidos": 6,
-      "pts_bonus": 0,
-      "pts_duelos": 0,
-      "marcadores_exactos": 1,
-      "ganadores_correctos": 3,
-      "fallos": 5,
+      "fallos": 6,
       "pos": 13
+    },
+    {
+      "slot": 19,
+      "nombre": "Sofía Maldonado",
+      "pts_total": 7,
+      "pts_partidos": 5,
+      "pts_bonus": 0,
+      "pts_duelos": 2,
+      "pts_grupos": 5,
+      "pts_r32": 0,
+      "marcadores_exactos": 0,
+      "ganadores_correctos": 5,
+      "fallos": 6,
+      "pos": 14
+    },
+    {
+      "slot": 2,
+      "nombre": "Hernán Treviño Cantú",
+      "pts_total": 6,
+      "pts_partidos": 6,
+      "pts_bonus": 0,
+      "pts_duelos": 0,
+      "pts_grupos": 6,
+      "pts_r32": 0,
+      "marcadores_exactos": 1,
+      "ganadores_correctos": 3,
+      "fallos": 7,
+      "pos": 15
     },
     {
       "slot": 18,
@@ -12575,22 +15534,12 @@
       "pts_partidos": 6,
       "pts_bonus": 0,
       "pts_duelos": 0,
+      "pts_grupos": 6,
+      "pts_r32": 0,
       "marcadores_exactos": 1,
       "ganadores_correctos": 3,
-      "fallos": 5,
-      "pos": 14
-    },
-    {
-      "slot": 2,
-      "nombre": "Hernán Treviño Cantú",
-      "pts_total": 5,
-      "pts_partidos": 5,
-      "pts_bonus": 0,
-      "pts_duelos": 0,
-      "marcadores_exactos": 1,
-      "ganadores_correctos": 2,
-      "fallos": 6,
-      "pos": 15
+      "fallos": 7,
+      "pos": 16
     },
     {
       "slot": 9,
@@ -12599,10 +15548,12 @@
       "pts_partidos": 5,
       "pts_bonus": 0,
       "pts_duelos": 0,
+      "pts_grupos": 5,
+      "pts_r32": 0,
       "marcadores_exactos": 0,
       "ganadores_correctos": 5,
-      "fallos": 4,
-      "pos": 16
+      "fallos": 6,
+      "pos": 17
     },
     {
       "slot": 8,
@@ -12611,21 +15562,11 @@
       "pts_partidos": 4,
       "pts_bonus": 0,
       "pts_duelos": 0,
+      "pts_grupos": 4,
+      "pts_r32": 0,
       "marcadores_exactos": 0,
       "ganadores_correctos": 4,
-      "fallos": 5,
-      "pos": 17
-    },
-    {
-      "slot": 19,
-      "nombre": "Sofía Maldonado",
-      "pts_total": 4,
-      "pts_partidos": 4,
-      "pts_bonus": 0,
-      "pts_duelos": 0,
-      "marcadores_exactos": 0,
-      "ganadores_correctos": 4,
-      "fallos": 5,
+      "fallos": 7,
       "pos": 18
     },
     {
@@ -12635,9 +15576,11 @@
       "pts_partidos": 4,
       "pts_bonus": 0,
       "pts_duelos": 0,
+      "pts_grupos": 4,
+      "pts_r32": 0,
       "marcadores_exactos": 0,
       "ganadores_correctos": 4,
-      "fallos": 5,
+      "fallos": 7,
       "pos": 19
     },
     {
@@ -12647,9 +15590,11 @@
       "pts_partidos": 4,
       "pts_bonus": 0,
       "pts_duelos": 0,
+      "pts_grupos": 4,
+      "pts_r32": 0,
       "marcadores_exactos": 0,
       "ganadores_correctos": 4,
-      "fallos": 5,
+      "fallos": 7,
       "pos": 20
     },
     {
@@ -12659,9 +15604,11 @@
       "pts_partidos": 3,
       "pts_bonus": 0,
       "pts_duelos": 0,
+      "pts_grupos": 3,
+      "pts_r32": 0,
       "marcadores_exactos": 0,
       "ganadores_correctos": 3,
-      "fallos": 6,
+      "fallos": 8,
       "pos": 21
     }
   ]
