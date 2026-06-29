@@ -1001,6 +1001,60 @@ function renderMundialBracket() {
     `;
   };
 
+  // ===== R32 con datos REALES (partidos 73-88) =====
+  const R32REAL = (DATA.partidos || []).filter(p => p.fase === 'r32').sort((a, b) => (a.num || 0) - (b.num || 0));
+  const renderR32Real = (p) => {
+    const jug = p.jugado, gl = p.gol_local, gv = p.gol_visit;
+    const winL = jug && gl > gv, winV = jug && gv > gl, emp = jug && gl === gv;
+    const cls = (w) => 'bracket-name' + (w ? ' confirmed' : (jug ? '' : ' provisional'));
+    const st  = (w) => w ? ' <span class="bracket-conf">✓</span>' : '';
+    return `
+      <div class="bracket-match${jug ? ' played' : ''}">
+        <div class="bracket-team">
+          <span class="bracket-flag">${flag(p.local)}</span>
+          <span class="${cls(winL)}">${escapeHtml(p.local)}${st(winL)}</span>
+          <span class="bracket-score">${jug ? gl : '—'}</span>
+        </div>
+        <div class="bracket-team">
+          <span class="bracket-flag">${flag(p.visitante)}</span>
+          <span class="${cls(winV)}">${escapeHtml(p.visitante)}${st(winV)}</span>
+          <span class="bracket-score">${jug ? gv : '—'}</span>
+        </div>
+        <div class="bracket-meta">📅 ${p.fecha} · ${p.hora}${emp ? " · empate 90' (penales)" : ''}</div>
+      </div>
+    `;
+  };
+
+  // ===== Octavos: ganadores de R32 según el cuadro oficial 2026 =====
+  const r32byNum = {}; R32REAL.forEach(p => { r32byNum[p.num] = p; });
+  const ganadorR32 = (num) => {
+    const p = r32byNum[num];
+    if (!p || !p.jugado) return null;
+    if (p.gol_local > p.gol_visit) return p.local;
+    if (p.gol_visit > p.gol_local) return p.visitante;
+    return null; // empate 90' → penales (no definido por marcador)
+  };
+  const OCT_PAIRS = [
+    { fecha: 'Sáb 4 Jul', a: 75, b: 78 }, { fecha: 'Sáb 4 Jul', a: 73, b: 76 },
+    { fecha: 'Dom 5 Jul', a: 84, b: 83 }, { fecha: 'Dom 5 Jul', a: 82, b: 81 },
+    { fecha: 'Lun 6 Jul', a: 74, b: 77 }, { fecha: 'Lun 6 Jul', a: 79, b: 80 },
+    { fecha: 'Mar 7 Jul', a: 87, b: 86 }, { fecha: 'Mar 7 Jul', a: 85, b: 88 },
+  ].map(o => ({ ...o, _oct: true }));
+  const r32lbl = (num) => { const p = r32byNum[num]; return p ? `Ganador ${p.local}/${p.visitante}` : 'Ganador R32'; };
+  const renderOctReal = (o) => {
+    const ga = ganadorR32(o.a), gb = ganadorR32(o.b);
+    const slot = (g, num) => g
+      ? `<span class="bracket-flag">${flag(g)}</span><span class="bracket-name confirmed">${escapeHtml(g)} <span class="bracket-conf">✓</span></span>`
+      : `<span class="bracket-flag"></span><span class="bracket-name"><span class="bracket-pending-team">${r32lbl(num)}</span></span>`;
+    return `
+      <div class="bracket-match">
+        <div class="bracket-team">${slot(ga, o.a)}<span class="bracket-score">—</span></div>
+        <div class="bracket-team">${slot(gb, o.b)}<span class="bracket-score">—</span></div>
+        <div class="bracket-meta">📅 ${o.fecha}</div>
+      </div>
+    `;
+  };
+
   // ===== Layout vertical (móvil/tablet) =====
   const fases = [
     { key: 'R32', label: 'R32',     info: '28-30 jun · 1-2 jul' },
@@ -1016,7 +1070,7 @@ function renderMundialBracket() {
           <div class="bracket-col">
             <div class="bracket-col-title">${f.label}</div>
             <div class="bracket-stage-info">${f.info}</div>
-            ${ELIMINATORIAS.filter(p => p.fase === f.key).map(p => renderMatch(p, f.key === 'FIN')).join('')}
+            ${f.key === 'R32' && R32REAL.length ? R32REAL.map(renderR32Real).join('') : f.key === 'OCT' && R32REAL.length ? OCT_PAIRS.map(renderOctReal).join('') : ELIMINATORIAS.filter(p => p.fase === f.key).map(p => renderMatch(p, f.key === 'FIN')).join('')}
           </div>
         `).join('')}
       </div>
@@ -1035,15 +1089,15 @@ function renderMundialBracket() {
     <div class="bracket-col${isFinal ? ' bracket-col-final' : ''}">
       <div class="bracket-col-title">${label}</div>
       <div class="bracket-stage-info">${info}</div>
-      ${matches.map(p => renderMatch(p, isFinal)).join('')}
+      ${matches.map(p => (p && p._oct) ? renderOctReal(p) : (p && p.fase === 'r32') ? renderR32Real(p) : renderMatch(p, isFinal)).join('')}
     </div>
   `;
   const fin = byFase.FIN[0];
   const symmetricHTML = `
     <div class="bracket-symmetric">
       <div class="bracket-half bracket-half-left">
-        ${colHTML('R32', '28-30 jun · 1-2 jul', byFase.R32.slice(0,8))}
-        ${colHTML('Octavos', '4-7 jul', byFase.OCT.slice(0,4))}
+        ${colHTML('R32', '28 jun · 3 jul', (R32REAL.length ? R32REAL : byFase.R32).slice(0,8))}
+        ${colHTML('Octavos', '4-7 jul', (R32REAL.length ? OCT_PAIRS : byFase.OCT).slice(0,4))}
         ${colHTML('Cuartos', '9-11 jul', byFase.CUA.slice(0,2))}
         ${colHTML('Semis', '14-15 jul', byFase.SEM.slice(0,1))}
       </div>
@@ -1054,8 +1108,8 @@ function renderMundialBracket() {
       <div class="bracket-half bracket-half-right">
         ${colHTML('Semis', '14-15 jul', byFase.SEM.slice(1,2))}
         ${colHTML('Cuartos', '9-11 jul', byFase.CUA.slice(2,4))}
-        ${colHTML('Octavos', '4-7 jul', byFase.OCT.slice(4,8))}
-        ${colHTML('R32', '28-30 jun · 1-2 jul', byFase.R32.slice(8,16))}
+        ${colHTML('Octavos', '4-7 jul', (R32REAL.length ? OCT_PAIRS : byFase.OCT).slice(4,8))}
+        ${colHTML('R32', '28 jun · 3 jul', (R32REAL.length ? R32REAL : byFase.R32).slice(8,16))}
       </div>
     </div>
   `;

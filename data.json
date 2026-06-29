@@ -12520,8 +12520,8 @@
         {
           "slot": 11,
           "nombre": "Adriana Silva",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
@@ -12756,148 +12756,148 @@
         {
           "slot": 1,
           "nombre": "Alejandro De Keijser",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 2,
           "nombre": "Hernán Treviño Cantú",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 3,
           "nombre": "Paola Salazar",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 4,
           "nombre": "Amaya Rivas",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 5,
           "nombre": "Amaya Rivas 2",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 6,
           "nombre": "Iván López",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 7,
           "nombre": "Cecilia Macyshyn",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 8,
           "nombre": "Cesar Chavez",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 9,
           "nombre": "Daniela Dávila",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 10,
           "nombre": "Martín Chávez",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 11,
           "nombre": "Adriana Silva",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 12,
           "nombre": "Fátima Elizarrarás",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 13,
           "nombre": "Hiram Canseco",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 14,
           "nombre": "Ronald Hidalgo",
-          "local": null,
-          "visitante": null,
+          "local": 4,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 15,
           "nombre": "Alan Márquez",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 16,
           "nombre": "Lucia Dosal",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 17,
           "nombre": "Luz Guajardo",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 18,
           "nombre": "Mayra Cuevas",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 19,
           "nombre": "Sofía Maldonado",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 20,
           "nombre": "Joel Valenzuela",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 21,
           "nombre": "Jorge Flores",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         }
       ]
@@ -12909,148 +12909,148 @@
         {
           "slot": 1,
           "nombre": "Alejandro De Keijser",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 2,
           "nombre": "Hernán Treviño Cantú",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 3,
           "nombre": "Paola Salazar",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 4,
           "nombre": "Amaya Rivas",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 5,
           "nombre": "Amaya Rivas 2",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 6,
           "nombre": "Iván López",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 7,
           "nombre": "Cecilia Macyshyn",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 8,
           "nombre": "Cesar Chavez",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 9,
           "nombre": "Daniela Dávila",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 10,
           "nombre": "Martín Chávez",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 11,
           "nombre": "Adriana Silva",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 12,
           "nombre": "Fátima Elizarrarás",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 13,
           "nombre": "Hiram Canseco",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 14,
           "nombre": "Ronald Hidalgo",
-          "local": null,
-          "visitante": null,
+          "local": 4,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 15,
           "nombre": "Alan Márquez",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 16,
           "nombre": "Lucia Dosal",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 17,
           "nombre": "Luz Guajardo",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 18,
           "nombre": "Mayra Cuevas",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 19,
           "nombre": "Sofía Maldonado",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 20,
           "nombre": "Joel Valenzuela",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 21,
           "nombre": "Jorge Flores",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 2,
           "pts": null
         }
       ]
@@ -13062,148 +13062,148 @@
         {
           "slot": 1,
           "nombre": "Alejandro De Keijser",
-          "local": null,
-          "visitante": null,
+          "local": 0,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 2,
           "nombre": "Hernán Treviño Cantú",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 3,
           "nombre": "Paola Salazar",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 4,
           "nombre": "Amaya Rivas",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 5,
           "nombre": "Amaya Rivas 2",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 3,
           "pts": null
         },
         {
           "slot": 6,
           "nombre": "Iván López",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 7,
           "nombre": "Cecilia Macyshyn",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 8,
           "nombre": "Cesar Chavez",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 9,
           "nombre": "Daniela Dávila",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 3,
           "pts": null
         },
         {
           "slot": 10,
           "nombre": "Martín Chávez",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 11,
           "nombre": "Adriana Silva",
-          "local": null,
-          "visitante": null,
+          "local": 0,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 12,
           "nombre": "Fátima Elizarrarás",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 13,
           "nombre": "Hiram Canseco",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 14,
           "nombre": "Ronald Hidalgo",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 3,
           "pts": null
         },
         {
           "slot": 15,
           "nombre": "Alan Márquez",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 16,
           "nombre": "Lucia Dosal",
-          "local": null,
-          "visitante": null,
+          "local": 0,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 17,
           "nombre": "Luz Guajardo",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 18,
           "nombre": "Mayra Cuevas",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 3,
           "pts": null
         },
         {
           "slot": 19,
           "nombre": "Sofía Maldonado",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 20,
           "nombre": "Joel Valenzuela",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 21,
           "nombre": "Jorge Flores",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 2,
           "pts": null
         }
       ]
@@ -13215,148 +13215,148 @@
         {
           "slot": 1,
           "nombre": "Alejandro De Keijser",
-          "local": null,
-          "visitante": null,
+          "local": 0,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 2,
           "nombre": "Hernán Treviño Cantú",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 3,
           "nombre": "Paola Salazar",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 4,
           "nombre": "Amaya Rivas",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 5,
           "nombre": "Amaya Rivas 2",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 6,
           "nombre": "Iván López",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 7,
           "nombre": "Cecilia Macyshyn",
-          "local": null,
-          "visitante": null,
+          "local": 4,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 8,
           "nombre": "Cesar Chavez",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 9,
           "nombre": "Daniela Dávila",
-          "local": null,
-          "visitante": null,
+          "local": 4,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 10,
           "nombre": "Martín Chávez",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 11,
           "nombre": "Adriana Silva",
-          "local": null,
-          "visitante": null,
+          "local": 4,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 12,
           "nombre": "Fátima Elizarrarás",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 13,
           "nombre": "Hiram Canseco",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 14,
           "nombre": "Ronald Hidalgo",
-          "local": null,
-          "visitante": null,
+          "local": 5,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 15,
           "nombre": "Alan Márquez",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 16,
           "nombre": "Lucia Dosal",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 17,
           "nombre": "Luz Guajardo",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 18,
           "nombre": "Mayra Cuevas",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 19,
           "nombre": "Sofía Maldonado",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 20,
           "nombre": "Joel Valenzuela",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 21,
           "nombre": "Jorge Flores",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 1,
           "pts": null
         }
       ]
@@ -13368,148 +13368,148 @@
         {
           "slot": 1,
           "nombre": "Alejandro De Keijser",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 2,
           "nombre": "Hernán Treviño Cantú",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 3,
           "nombre": "Paola Salazar",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 4,
           "nombre": "Amaya Rivas",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 5,
           "nombre": "Amaya Rivas 2",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 6,
           "nombre": "Iván López",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 7,
           "nombre": "Cecilia Macyshyn",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 8,
           "nombre": "Cesar Chavez",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 9,
           "nombre": "Daniela Dávila",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 10,
           "nombre": "Martín Chávez",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 11,
           "nombre": "Adriana Silva",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 12,
           "nombre": "Fátima Elizarrarás",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 13,
           "nombre": "Hiram Canseco",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 14,
           "nombre": "Ronald Hidalgo",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 15,
           "nombre": "Alan Márquez",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 16,
           "nombre": "Lucia Dosal",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 17,
           "nombre": "Luz Guajardo",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 18,
           "nombre": "Mayra Cuevas",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 19,
           "nombre": "Sofía Maldonado",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 20,
           "nombre": "Joel Valenzuela",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 21,
           "nombre": "Jorge Flores",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         }
       ]
@@ -13521,148 +13521,148 @@
         {
           "slot": 1,
           "nombre": "Alejandro De Keijser",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 2,
           "nombre": "Hernán Treviño Cantú",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 3,
           "nombre": "Paola Salazar",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 4,
           "nombre": "Amaya Rivas",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 5,
           "nombre": "Amaya Rivas 2",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 6,
           "nombre": "Iván López",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 7,
           "nombre": "Cecilia Macyshyn",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 8,
           "nombre": "Cesar Chavez",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 9,
           "nombre": "Daniela Dávila",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 10,
           "nombre": "Martín Chávez",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 11,
           "nombre": "Adriana Silva",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 12,
           "nombre": "Fátima Elizarrarás",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 13,
           "nombre": "Hiram Canseco",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 14,
           "nombre": "Ronald Hidalgo",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 15,
           "nombre": "Alan Márquez",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 16,
           "nombre": "Lucia Dosal",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 17,
           "nombre": "Luz Guajardo",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 18,
           "nombre": "Mayra Cuevas",
-          "local": null,
-          "visitante": null,
+          "local": 4,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 19,
           "nombre": "Sofía Maldonado",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 20,
           "nombre": "Joel Valenzuela",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 21,
           "nombre": "Jorge Flores",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         }
       ]
@@ -13674,148 +13674,148 @@
         {
           "slot": 1,
           "nombre": "Alejandro De Keijser",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 2,
           "nombre": "Hernán Treviño Cantú",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 3,
           "nombre": "Paola Salazar",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 4,
           "nombre": "Amaya Rivas",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 5,
           "nombre": "Amaya Rivas 2",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 6,
           "nombre": "Iván López",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 7,
           "nombre": "Cecilia Macyshyn",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 8,
           "nombre": "Cesar Chavez",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 9,
           "nombre": "Daniela Dávila",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 10,
           "nombre": "Martín Chávez",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 11,
           "nombre": "Adriana Silva",
-          "local": null,
-          "visitante": null,
+          "local": 0,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 12,
           "nombre": "Fátima Elizarrarás",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 13,
           "nombre": "Hiram Canseco",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 14,
           "nombre": "Ronald Hidalgo",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 15,
           "nombre": "Alan Márquez",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 16,
           "nombre": "Lucia Dosal",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 17,
           "nombre": "Luz Guajardo",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 18,
           "nombre": "Mayra Cuevas",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 19,
           "nombre": "Sofía Maldonado",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 20,
           "nombre": "Joel Valenzuela",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 21,
           "nombre": "Jorge Flores",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         }
       ]
@@ -13827,148 +13827,148 @@
         {
           "slot": 1,
           "nombre": "Alejandro De Keijser",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 2,
           "nombre": "Hernán Treviño Cantú",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 3,
           "nombre": "Paola Salazar",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 4,
           "nombre": "Amaya Rivas",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 5,
           "nombre": "Amaya Rivas 2",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 6,
           "nombre": "Iván López",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 7,
           "nombre": "Cecilia Macyshyn",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 8,
           "nombre": "Cesar Chavez",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 9,
           "nombre": "Daniela Dávila",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 10,
           "nombre": "Martín Chávez",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 11,
           "nombre": "Adriana Silva",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 12,
           "nombre": "Fátima Elizarrarás",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 13,
           "nombre": "Hiram Canseco",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 14,
           "nombre": "Ronald Hidalgo",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 15,
           "nombre": "Alan Márquez",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 16,
           "nombre": "Lucia Dosal",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 17,
           "nombre": "Luz Guajardo",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 18,
           "nombre": "Mayra Cuevas",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 19,
           "nombre": "Sofía Maldonado",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 20,
           "nombre": "Joel Valenzuela",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 21,
           "nombre": "Jorge Flores",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         }
       ]
@@ -13980,148 +13980,148 @@
         {
           "slot": 1,
           "nombre": "Alejandro De Keijser",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 2,
           "nombre": "Hernán Treviño Cantú",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 3,
           "nombre": "Paola Salazar",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 4,
           "nombre": "Amaya Rivas",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 5,
           "nombre": "Amaya Rivas 2",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 6,
           "nombre": "Iván López",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 7,
           "nombre": "Cecilia Macyshyn",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 8,
           "nombre": "Cesar Chavez",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 9,
           "nombre": "Daniela Dávila",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 10,
           "nombre": "Martín Chávez",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 11,
           "nombre": "Adriana Silva",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 12,
           "nombre": "Fátima Elizarrarás",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 13,
           "nombre": "Hiram Canseco",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 14,
           "nombre": "Ronald Hidalgo",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 15,
           "nombre": "Alan Márquez",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 16,
           "nombre": "Lucia Dosal",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 17,
           "nombre": "Luz Guajardo",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 18,
           "nombre": "Mayra Cuevas",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 19,
           "nombre": "Sofía Maldonado",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 20,
           "nombre": "Joel Valenzuela",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 21,
           "nombre": "Jorge Flores",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 1,
           "pts": null
         }
       ]
@@ -14133,148 +14133,148 @@
         {
           "slot": 1,
           "nombre": "Alejandro De Keijser",
-          "local": null,
-          "visitante": null,
+          "local": 0,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 2,
           "nombre": "Hernán Treviño Cantú",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 3,
           "nombre": "Paola Salazar",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 4,
           "nombre": "Amaya Rivas",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 5,
           "nombre": "Amaya Rivas 2",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 6,
           "nombre": "Iván López",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 7,
           "nombre": "Cecilia Macyshyn",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 8,
           "nombre": "Cesar Chavez",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 9,
           "nombre": "Daniela Dávila",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 10,
           "nombre": "Martín Chávez",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 11,
           "nombre": "Adriana Silva",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 12,
           "nombre": "Fátima Elizarrarás",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 13,
           "nombre": "Hiram Canseco",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 14,
           "nombre": "Ronald Hidalgo",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 3,
           "pts": null
         },
         {
           "slot": 15,
           "nombre": "Alan Márquez",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 16,
           "nombre": "Lucia Dosal",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 17,
           "nombre": "Luz Guajardo",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 18,
           "nombre": "Mayra Cuevas",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 19,
           "nombre": "Sofía Maldonado",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 20,
           "nombre": "Joel Valenzuela",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 21,
           "nombre": "Jorge Flores",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         }
       ]
@@ -14286,148 +14286,148 @@
         {
           "slot": 1,
           "nombre": "Alejandro De Keijser",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 2,
           "nombre": "Hernán Treviño Cantú",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 3,
           "nombre": "Paola Salazar",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 4,
           "nombre": "Amaya Rivas",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 5,
           "nombre": "Amaya Rivas 2",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 6,
           "nombre": "Iván López",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 7,
           "nombre": "Cecilia Macyshyn",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 8,
           "nombre": "Cesar Chavez",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 9,
           "nombre": "Daniela Dávila",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 10,
           "nombre": "Martín Chávez",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 11,
           "nombre": "Adriana Silva",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 12,
           "nombre": "Fátima Elizarrarás",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 13,
           "nombre": "Hiram Canseco",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 14,
           "nombre": "Ronald Hidalgo",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 15,
           "nombre": "Alan Márquez",
-          "local": null,
-          "visitante": null,
+          "local": 0,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 16,
           "nombre": "Lucia Dosal",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 17,
           "nombre": "Luz Guajardo",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 18,
           "nombre": "Mayra Cuevas",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 19,
           "nombre": "Sofía Maldonado",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 20,
           "nombre": "Joel Valenzuela",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 21,
           "nombre": "Jorge Flores",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         }
       ]
@@ -14439,148 +14439,148 @@
         {
           "slot": 1,
           "nombre": "Alejandro De Keijser",
-          "local": null,
-          "visitante": null,
+          "local": 0,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 2,
           "nombre": "Hernán Treviño Cantú",
-          "local": null,
-          "visitante": null,
+          "local": 0,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 3,
           "nombre": "Paola Salazar",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 4,
           "nombre": "Amaya Rivas",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 5,
           "nombre": "Amaya Rivas 2",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 6,
           "nombre": "Iván López",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 7,
           "nombre": "Cecilia Macyshyn",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 8,
           "nombre": "Cesar Chavez",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 9,
           "nombre": "Daniela Dávila",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 10,
           "nombre": "Martín Chávez",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 11,
           "nombre": "Adriana Silva",
-          "local": null,
-          "visitante": null,
+          "local": 0,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 12,
           "nombre": "Fátima Elizarrarás",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 13,
           "nombre": "Hiram Canseco",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 14,
           "nombre": "Ronald Hidalgo",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 15,
           "nombre": "Alan Márquez",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 16,
           "nombre": "Lucia Dosal",
-          "local": null,
-          "visitante": null,
+          "local": 0,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 17,
           "nombre": "Luz Guajardo",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 18,
           "nombre": "Mayra Cuevas",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 3,
           "pts": null
         },
         {
           "slot": 19,
           "nombre": "Sofía Maldonado",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 20,
           "nombre": "Joel Valenzuela",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 21,
           "nombre": "Jorge Flores",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         }
       ]
@@ -14592,148 +14592,148 @@
         {
           "slot": 1,
           "nombre": "Alejandro De Keijser",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 2,
           "nombre": "Hernán Treviño Cantú",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 3,
           "nombre": "Paola Salazar",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 4,
           "nombre": "Amaya Rivas",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 5,
           "nombre": "Amaya Rivas 2",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 6,
           "nombre": "Iván López",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 7,
           "nombre": "Cecilia Macyshyn",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 8,
           "nombre": "Cesar Chavez",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 9,
           "nombre": "Daniela Dávila",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 10,
           "nombre": "Martín Chávez",
-          "local": null,
-          "visitante": null,
+          "local": 4,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 11,
           "nombre": "Adriana Silva",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 12,
           "nombre": "Fátima Elizarrarás",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 13,
           "nombre": "Hiram Canseco",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 14,
           "nombre": "Ronald Hidalgo",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 15,
           "nombre": "Alan Márquez",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 16,
           "nombre": "Lucia Dosal",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 17,
           "nombre": "Luz Guajardo",
-          "local": null,
-          "visitante": null,
+          "local": 4,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 18,
           "nombre": "Mayra Cuevas",
-          "local": null,
-          "visitante": null,
+          "local": 4,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 19,
           "nombre": "Sofía Maldonado",
-          "local": null,
-          "visitante": null,
+          "local": 4,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 20,
           "nombre": "Joel Valenzuela",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 21,
           "nombre": "Jorge Flores",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 1,
           "pts": null
         }
       ]
@@ -14745,148 +14745,148 @@
         {
           "slot": 1,
           "nombre": "Alejandro De Keijser",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 2,
           "nombre": "Hernán Treviño Cantú",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 3,
           "nombre": "Paola Salazar",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 4,
           "nombre": "Amaya Rivas",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 5,
           "nombre": "Amaya Rivas 2",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 6,
           "nombre": "Iván López",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 7,
           "nombre": "Cecilia Macyshyn",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 8,
           "nombre": "Cesar Chavez",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 9,
           "nombre": "Daniela Dávila",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 10,
           "nombre": "Martín Chávez",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 11,
           "nombre": "Adriana Silva",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 12,
           "nombre": "Fátima Elizarrarás",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 13,
           "nombre": "Hiram Canseco",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 14,
           "nombre": "Ronald Hidalgo",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 2,
           "pts": null
         },
         {
           "slot": 15,
           "nombre": "Alan Márquez",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 16,
           "nombre": "Lucia Dosal",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 17,
           "nombre": "Luz Guajardo",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 18,
           "nombre": "Mayra Cuevas",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 0,
           "pts": null
         },
         {
           "slot": 19,
           "nombre": "Sofía Maldonado",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 20,
           "nombre": "Joel Valenzuela",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
           "slot": 21,
           "nombre": "Jorge Flores",
-          "local": null,
-          "visitante": null,
+          "local": 2,
+          "visitante": 1,
           "pts": null
         }
       ]
