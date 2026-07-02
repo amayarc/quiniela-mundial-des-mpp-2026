@@ -25,6 +25,13 @@ document.addEventListener('DOMContentLoaded', async () => {
               }
             });
           }
+          if (fb.avanza) {
+            Object.entries(fb.avanza).forEach(([num, team]) => {
+              if (!team) return;
+              const p = DATA.partidos.find(x => x.num === Number(num));
+              if (p) p.avanza = team;
+            });
+          }
           DATA.meta.campeon_real  = fb.campeon_real  || null;
           DATA.meta.goleador_real = fb.goleador_real || null;
           if (fb.bota_de_oro !== undefined) DATA.meta.bota_de_oro = fb.bota_de_oro;
@@ -1004,8 +1011,9 @@ function renderMundialBracket() {
   // ===== R32 con datos REALES (partidos 73-88) =====
   const R32REAL = (DATA.partidos || []).filter(p => p.fase === 'r32').sort((a, b) => (a.num || 0) - (b.num || 0));
   const renderR32Real = (p) => {
-    const jug = p.jugado, gl = p.gol_local, gv = p.gol_visit;
-    const winL = jug && gl > gv, winV = jug && gv > gl, emp = jug && gl === gv;
+    const jug = p.jugado, gl = p.gol_local, gv = p.gol_visit, emp = jug && gl === gv;
+    const winner = p.avanza || (jug && !emp ? (gl > gv ? p.local : p.visitante) : null);
+    const winL = winner === p.local, winV = winner === p.visitante;
     const cls = (w) => 'bracket-name' + (w ? ' confirmed' : (jug ? '' : ' provisional'));
     const st  = (w) => w ? ' <span class="bracket-conf">✓</span>' : '';
     return `
@@ -1020,7 +1028,7 @@ function renderMundialBracket() {
           <span class="${cls(winV)}">${escapeHtml(p.visitante)}${st(winV)}</span>
           <span class="bracket-score">${jug ? gv : '—'}</span>
         </div>
-        <div class="bracket-meta">📅 ${p.fecha} · ${p.hora}${emp ? " · empate 90' (penales)" : ''}</div>
+        <div class="bracket-meta">📅 ${p.fecha} · ${p.hora}${emp ? (p.avanza ? ' · pasó ' + escapeHtml(p.avanza) + ' (pen.)' : " · empate 90' (penales)") : ''}</div>
       </div>
     `;
   };
@@ -1029,10 +1037,12 @@ function renderMundialBracket() {
   const r32byNum = {}; R32REAL.forEach(p => { r32byNum[p.num] = p; });
   const ganadorR32 = (num) => {
     const p = r32byNum[num];
-    if (!p || !p.jugado) return null;
+    if (!p) return null;
+    if (p.avanza) return p.avanza;         // quién pasó (penales) capturado a mano
+    if (!p.jugado) return null;
     if (p.gol_local > p.gol_visit) return p.local;
     if (p.gol_visit > p.gol_local) return p.visitante;
-    return null; // empate 90' → penales (no definido por marcador)
+    return null; // empate 90' sin definir quién pasó
   };
   const OCT_PAIRS = [
     { fecha: 'Sáb 4 Jul', a: 75, b: 78 }, { fecha: 'Sáb 4 Jul', a: 73, b: 76 },
@@ -1229,6 +1239,7 @@ async function guardarEnFirebase() {
   // Payload: solo resultados, bonus y bota de oro
   const payload = {
     resultados:    {},
+    avanza:        {},
     campeon_real:  CAPT.meta.campeon_real,
     goleador_real: CAPT.meta.goleador_real,
     bota_de_oro:   CAPT.meta.bota_de_oro,
@@ -1237,6 +1248,7 @@ async function guardarEnFirebase() {
     if (p.gol_local != null && p.gol_visit != null) {
       payload.resultados[String(p.num)] = { l: p.gol_local, v: p.gol_visit };
     }
+    if (p.avanza) payload.avanza[String(p.num)] = p.avanza;
   });
 
   try {
@@ -1309,9 +1321,26 @@ function renderCapturarPartidos() {
           <span class="dash">-</span>
           <input type="number" min="0" max="20" value="${p.gol_visit ?? ''}" data-num="${p.num}" data-side="V">
         </div>
+        ${(p.fase && p.fase !== 'grupos') ? `<div class="capt-avanza">
+          <span class="capt-avanza-lbl">Pasa (penales):</span>
+          <button type="button" class="capt-avanza-btn ${p.avanza===p.local?'active':''}" data-num="${p.num}" data-team="${escapeHtml(p.local)}">${escapeHtml(p.local)}</button>
+          <button type="button" class="capt-avanza-btn ${p.avanza===p.visitante?'active':''}" data-num="${p.num}" data-team="${escapeHtml(p.visitante)}">${escapeHtml(p.visitante)}</button>
+        </div>` : ''}
       </div>
     `;
   }).join('');
+
+  cont.querySelectorAll('.capt-avanza-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const num = Number(btn.dataset.num), team = btn.dataset.team;
+      const partido = CAPT.partidos.find(x => x.num === num);
+      if (!partido) return;
+      partido.avanza = (partido.avanza === team) ? null : team;
+      btn.closest('.capt-partido').querySelectorAll('.capt-avanza-btn').forEach(b => {
+        b.classList.toggle('active', b.dataset.team === partido.avanza);
+      });
+    });
+  });
 
   cont.querySelectorAll('input[type=number]').forEach(inp => {
     inp.addEventListener('input', e => {

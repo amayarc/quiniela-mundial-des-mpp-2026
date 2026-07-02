@@ -1228,7 +1228,8 @@
       "visitante": "Paraguay",
       "gol_local": null,
       "gol_visit": null,
-      "jugado": false
+      "jugado": false,
+      "avanza": "Paraguay"
     },
     {
       "num": 76,
@@ -1243,7 +1244,8 @@
       "visitante": "Marruecos",
       "gol_local": null,
       "gol_visit": null,
-      "jugado": false
+      "jugado": false,
+      "avanza": "Marruecos"
     },
     {
       "num": 77,
@@ -1318,7 +1320,8 @@
       "visitante": "Senegal",
       "gol_local": null,
       "gol_visit": null,
-      "jugado": false
+      "jugado": false,
+      "avanza": "Bélgica"
     },
     {
       "num": 82,
