@@ -1045,10 +1045,14 @@ function renderMundialBracket() {
     return null; // empate 90' sin definir quién pasó
   };
   const OCT_PAIRS = [
-    { fecha: 'Sáb 4 Jul', a: 75, b: 78 }, { fecha: 'Sáb 4 Jul', a: 73, b: 76 },
-    { fecha: 'Dom 5 Jul', a: 84, b: 83 }, { fecha: 'Dom 5 Jul', a: 82, b: 81 },
-    { fecha: 'Lun 6 Jul', a: 74, b: 77 }, { fecha: 'Lun 6 Jul', a: 79, b: 80 },
-    { fecha: 'Mar 7 Jul', a: 87, b: 86 }, { fecha: 'Mar 7 Jul', a: 85, b: 88 },
+    { a: 73, b: 76, fecha: 'Sáb 4 Jul', hora: '11:00', sede: 'Estadio Houston' },
+    { a: 75, b: 78, fecha: 'Sáb 4 Jul', hora: '15:00', sede: 'Estadio Filadelfia' },
+    { a: 74, b: 77, fecha: 'Dom 5 Jul', hora: '14:00', sede: 'Estadio Nueva York/NJ' },
+    { a: 79, b: 80, fecha: 'Dom 5 Jul', hora: '18:00', sede: 'Estadio Ciudad de México' },
+    { a: 84, b: 83 },
+    { a: 82, b: 81 },
+    { a: 87, b: 86 },
+    { a: 85, b: 88 },
   ].map(o => ({ ...o, _oct: true }));
   const r32lbl = (num) => { const p = r32byNum[num]; return p ? `Ganador ${p.local}/${p.visitante}` : 'Ganador R32'; };
   const renderOctReal = (o) => {
@@ -1060,7 +1064,7 @@ function renderMundialBracket() {
       <div class="bracket-match">
         <div class="bracket-team">${slot(ga, o.a)}<span class="bracket-score">—</span></div>
         <div class="bracket-team">${slot(gb, o.b)}<span class="bracket-score">—</span></div>
-        <div class="bracket-meta">📅 ${o.fecha}</div>
+        <div class="bracket-meta">${o.fecha ? '📅 ' + o.fecha + (o.hora ? ' · ' + o.hora : '') + (o.sede ? ' · ' + escapeHtml(o.sede) : '') : 'Por definir'}</div>
       </div>
     `;
   };
