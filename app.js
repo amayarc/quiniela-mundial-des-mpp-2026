@@ -1051,8 +1051,8 @@ function renderMundialBracket() {
     { a: 79, b: 80, fecha: 'Dom 5 Jul', hora: '18:00', sede: 'Estadio Ciudad de México' },
     { a: 84, b: 83, fecha: 'Lun 6 Jul', hora: '13:00', sede: 'Estadio Dallas' },
     { a: 82, b: 81, fecha: 'Lun 6 Jul', hora: '18:00', sede: 'Estadio Seattle' },
-    { a: 87, b: 86, fecha: 'Mar 7 Jul' },
-    { a: 85, b: 88, fecha: 'Mar 7 Jul' },
+    { a: 87, b: 86, fecha: 'Mar 7 Jul', hora: '10:00', sede: 'Estadio Atlanta' },
+    { a: 85, b: 88, fecha: 'Mar 7 Jul', hora: '14:00', sede: 'Estadio Vancouver' },
   ].map(o => ({ ...o, _oct: true }));
   const r32lbl = (num) => { const p = r32byNum[num]; return p ? `Ganador ${p.local}/${p.visitante}` : 'Ganador R32'; };
   const renderOctReal = (o) => {
