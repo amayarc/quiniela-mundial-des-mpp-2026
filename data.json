@@ -15248,8 +15248,8 @@
         {
           "slot": 20,
           "nombre": "Joel Valenzuela",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
@@ -15401,8 +15401,8 @@
         {
           "slot": 20,
           "nombre": "Joel Valenzuela",
-          "local": null,
-          "visitante": null,
+          "local": 3,
+          "visitante": 1,
           "pts": null
         },
         {
@@ -15554,8 +15554,8 @@
         {
           "slot": 20,
           "nombre": "Joel Valenzuela",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
