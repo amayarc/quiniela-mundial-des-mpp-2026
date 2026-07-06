@@ -15684,8 +15684,8 @@
         {
           "slot": 14,
           "nombre": "Ronald Hidalgo",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 3,
           "pts": null
         },
         {
@@ -15705,8 +15705,8 @@
         {
           "slot": 17,
           "nombre": "Luz Guajardo",
-          "local": null,
-          "visitante": null,
+          "local": 1,
+          "visitante": 2,
           "pts": null
         },
         {
