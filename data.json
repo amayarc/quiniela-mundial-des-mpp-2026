@@ -21,7 +21,7 @@
       }
     ],
     "total_participantes": 21,
-    "total_partidos": 93,
+    "total_partidos": 94,
     "partidos_jugados": 11,
     "campeon_real": null,
     "goleador_real": null
@@ -1504,6 +1504,21 @@
       "estadio": "Estadio Dallas · Dallas",
       "local": "Portugal",
       "visitante": "España",
+      "gol_local": null,
+      "gol_visit": null,
+      "jugado": false
+    },
+    {
+      "num": 94,
+      "fase": "oct2",
+      "fase_label": "Octavos (Parte 2)",
+      "grupo": "Octavos",
+      "fecha": "Lun 6 Jul",
+      "fecha_iso": "2026-07-06",
+      "hora": "18:00",
+      "estadio": "Estadio Seattle · Seattle",
+      "local": "Estados Unidos",
+      "visitante": "Bélgica",
       "gol_local": null,
       "gol_visit": null,
       "jugado": false
@@ -15728,6 +15743,159 @@
           "nombre": "Joel Valenzuela",
           "local": 1,
           "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 21,
+          "nombre": "Jorge Flores",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        }
+      ]
+    },
+    {
+      "partido_num": 94,
+      "fase": "oct2",
+      "predicciones": [
+        {
+          "slot": 1,
+          "nombre": "Alejandro De Keijser",
+          "local": 0,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 2,
+          "nombre": "Hernán Treviño Cantú",
+          "local": 2,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 3,
+          "nombre": "Paola Salazar",
+          "local": 1,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 4,
+          "nombre": "Amaya Rivas",
+          "local": 2,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 5,
+          "nombre": "Amaya Rivas 2",
+          "local": 2,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 6,
+          "nombre": "Iván López",
+          "local": 1,
+          "visitante": 3,
+          "pts": null
+        },
+        {
+          "slot": 7,
+          "nombre": "Cecilia Macyshyn",
+          "local": 2,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 8,
+          "nombre": "Cesar Chavez",
+          "local": 2,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 9,
+          "nombre": "Daniela Dávila",
+          "local": 1,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 10,
+          "nombre": "Martín Chávez",
+          "local": 2,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 11,
+          "nombre": "Adriana Silva",
+          "local": 2,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 12,
+          "nombre": "Fátima Elizarrarás",
+          "local": 1,
+          "visitante": 0,
+          "pts": null
+        },
+        {
+          "slot": 13,
+          "nombre": "Hiram Canseco",
+          "local": 1,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 14,
+          "nombre": "Ronald Hidalgo",
+          "local": 3,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 15,
+          "nombre": "Alan Márquez",
+          "local": 3,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 16,
+          "nombre": "Lucia Dosal",
+          "local": 1,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 17,
+          "nombre": "Luz Guajardo",
+          "local": 2,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 18,
+          "nombre": "Mayra Cuevas",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 19,
+          "nombre": "Sofía Maldonado",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 20,
+          "nombre": "Joel Valenzuela",
+          "local": 2,
+          "visitante": 1,
           "pts": null
         },
         {
