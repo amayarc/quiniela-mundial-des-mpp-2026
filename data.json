@@ -1,7 +1,7 @@
 {
   "meta": {
     "nombre": "Quiniela Mundial DES & MPP 2026",
-    "fase": "Grupos + Dieciseisavos + Octavos",
+    "fase": "Grupos + Dieciseisavos + Octavos + Cuartos",
     "fases": [
       {
         "key": "grupos",
@@ -18,10 +18,14 @@
       {
         "key": "oct2",
         "label": "Octavos (Parte 2)"
+      },
+      {
+        "key": "cua",
+        "label": "Cuartos de Final"
       }
     ],
     "total_participantes": 21,
-    "total_partidos": 96,
+    "total_partidos": 97,
     "partidos_jugados": 11,
     "campeon_real": null,
     "goleador_real": null
@@ -1549,6 +1553,21 @@
       "estadio": "Estadio Vancouver · Vancouver",
       "local": "Suiza",
       "visitante": "Colombia",
+      "gol_local": null,
+      "gol_visit": null,
+      "jugado": false
+    },
+    {
+      "num": 97,
+      "fase": "cua",
+      "fase_label": "Cuartos de Final",
+      "grupo": "Cuartos",
+      "fecha": "Jue 9 Jul",
+      "fecha_iso": "2026-07-09",
+      "hora": "14:00",
+      "estadio": "Estadio Boston · Boston",
+      "local": "Francia",
+      "visitante": "Marruecos",
       "gol_local": null,
       "gol_visit": null,
       "jugado": false
@@ -16242,6 +16261,159 @@
           "pts": null
         }
       ]
+    },
+    {
+      "partido_num": 97,
+      "fase": "cua",
+      "predicciones": [
+        {
+          "slot": 1,
+          "nombre": "Alejandro De Keijser",
+          "local": 2,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 2,
+          "nombre": "Hernán Treviño Cantú",
+          "local": 2,
+          "visitante": 0,
+          "pts": null
+        },
+        {
+          "slot": 3,
+          "nombre": "Paola Salazar",
+          "local": 2,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 4,
+          "nombre": "Amaya Rivas",
+          "local": 3,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 5,
+          "nombre": "Amaya Rivas 2",
+          "local": 2,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 6,
+          "nombre": "Iván López",
+          "local": 2,
+          "visitante": 0,
+          "pts": null
+        },
+        {
+          "slot": 7,
+          "nombre": "Cecilia Macyshyn",
+          "local": 2,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 8,
+          "nombre": "Cesar Chavez",
+          "local": 3,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 9,
+          "nombre": "Daniela Dávila",
+          "local": 1,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 10,
+          "nombre": "Martín Chávez",
+          "local": 2,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 11,
+          "nombre": "Adriana Silva",
+          "local": 3,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 12,
+          "nombre": "Fátima Elizarrarás",
+          "local": 2,
+          "visitante": 0,
+          "pts": null
+        },
+        {
+          "slot": 13,
+          "nombre": "Hiram Canseco",
+          "local": 3,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 14,
+          "nombre": "Ronald Hidalgo",
+          "local": 1,
+          "visitante": 2,
+          "pts": null
+        },
+        {
+          "slot": 15,
+          "nombre": "Alan Márquez",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 16,
+          "nombre": "Lucia Dosal",
+          "local": 2,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 17,
+          "nombre": "Luz Guajardo",
+          "local": 2,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 18,
+          "nombre": "Mayra Cuevas",
+          "local": 2,
+          "visitante": 1,
+          "pts": null
+        },
+        {
+          "slot": 19,
+          "nombre": "Sofía Maldonado",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        },
+        {
+          "slot": 20,
+          "nombre": "Joel Valenzuela",
+          "local": 2,
+          "visitante": 0,
+          "pts": null
+        },
+        {
+          "slot": 21,
+          "nombre": "Jorge Flores",
+          "local": null,
+          "visitante": null,
+          "pts": null
+        }
+      ]
     }
   ],
   "bonus": [
@@ -16680,6 +16852,7 @@
       "pts_r32": 0,
       "pts_oct1": 0,
       "pts_oct2": 0,
+      "pts_cua": 0,
       "marcadores_exactos": 3,
       "ganadores_correctos": 4,
       "fallos": 4,
@@ -16696,6 +16869,7 @@
       "pts_r32": 0,
       "pts_oct1": 0,
       "pts_oct2": 0,
+      "pts_cua": 0,
       "marcadores_exactos": 3,
       "ganadores_correctos": 5,
       "fallos": 3,
@@ -16712,6 +16886,7 @@
       "pts_r32": 0,
       "pts_oct1": 0,
       "pts_oct2": 0,
+      "pts_cua": 0,
       "marcadores_exactos": 3,
       "ganadores_correctos": 2,
       "fallos": 6,
@@ -16728,6 +16903,7 @@
       "pts_r32": 0,
       "pts_oct1": 0,
       "pts_oct2": 0,
+      "pts_cua": 0,
       "marcadores_exactos": 2,
       "ganadores_correctos": 4,
       "fallos": 5,
@@ -16744,6 +16920,7 @@
       "pts_r32": 0,
       "pts_oct1": 0,
       "pts_oct2": 0,
+      "pts_cua": 0,
       "marcadores_exactos": 1,
       "ganadores_correctos": 7,
       "fallos": 3,
@@ -16760,6 +16937,7 @@
       "pts_r32": 0,
       "pts_oct1": 0,
       "pts_oct2": 0,
+      "pts_cua": 0,
       "marcadores_exactos": 2,
       "ganadores_correctos": 3,
       "fallos": 6,
@@ -16776,6 +16954,7 @@
       "pts_r32": 0,
       "pts_oct1": 0,
       "pts_oct2": 0,
+      "pts_cua": 0,
       "marcadores_exactos": 1,
       "ganadores_correctos": 4,
       "fallos": 6,
@@ -16792,6 +16971,7 @@
       "pts_r32": 0,
       "pts_oct1": 0,
       "pts_oct2": 0,
+      "pts_cua": 0,
       "marcadores_exactos": 1,
       "ganadores_correctos": 4,
       "fallos": 6,
@@ -16808,6 +16988,7 @@
       "pts_r32": 0,
       "pts_oct1": 0,
       "pts_oct2": 0,
+      "pts_cua": 0,
       "marcadores_exactos": 1,
       "ganadores_correctos": 4,
       "fallos": 6,
@@ -16824,6 +17005,7 @@
       "pts_r32": 0,
       "pts_oct1": 0,
       "pts_oct2": 0,
+      "pts_cua": 0,
       "marcadores_exactos": 1,
       "ganadores_correctos": 4,
       "fallos": 6,
@@ -16840,6 +17022,7 @@
       "pts_r32": 0,
       "pts_oct1": 0,
       "pts_oct2": 0,
+      "pts_cua": 0,
       "marcadores_exactos": 1,
       "ganadores_correctos": 4,
       "fallos": 6,
@@ -16856,6 +17039,7 @@
       "pts_r32": 0,
       "pts_oct1": 0,
       "pts_oct2": 0,
+      "pts_cua": 0,
       "marcadores_exactos": 1,
       "ganadores_correctos": 4,
       "fallos": 6,
@@ -16872,6 +17056,7 @@
       "pts_r32": 0,
       "pts_oct1": 0,
       "pts_oct2": 0,
+      "pts_cua": 0,
       "marcadores_exactos": 1,
       "ganadores_correctos": 4,
       "fallos": 6,
@@ -16888,6 +17073,7 @@
       "pts_r32": 0,
       "pts_oct1": 0,
       "pts_oct2": 0,
+      "pts_cua": 0,
       "marcadores_exactos": 0,
       "ganadores_correctos": 5,
       "fallos": 6,
@@ -16904,6 +17090,7 @@
       "pts_r32": 0,
       "pts_oct1": 0,
       "pts_oct2": 0,
+      "pts_cua": 0,
       "marcadores_exactos": 1,
       "ganadores_correctos": 3,
       "fallos": 7,
@@ -16920,6 +17107,7 @@
       "pts_r32": 0,
       "pts_oct1": 0,
       "pts_oct2": 0,
+      "pts_cua": 0,
       "marcadores_exactos": 1,
       "ganadores_correctos": 3,
       "fallos": 7,
@@ -16936,6 +17124,7 @@
       "pts_r32": 0,
       "pts_oct1": 0,
       "pts_oct2": 0,
+      "pts_cua": 0,
       "marcadores_exactos": 0,
       "ganadores_correctos": 5,
       "fallos": 6,
@@ -16952,6 +17141,7 @@
       "pts_r32": 0,
       "pts_oct1": 0,
       "pts_oct2": 0,
+      "pts_cua": 0,
       "marcadores_exactos": 0,
       "ganadores_correctos": 4,
       "fallos": 7,
@@ -16968,6 +17158,7 @@
       "pts_r32": 0,
       "pts_oct1": 0,
       "pts_oct2": 0,
+      "pts_cua": 0,
       "marcadores_exactos": 0,
       "ganadores_correctos": 4,
       "fallos": 7,
@@ -16984,6 +17175,7 @@
       "pts_r32": 0,
       "pts_oct1": 0,
       "pts_oct2": 0,
+      "pts_cua": 0,
       "marcadores_exactos": 0,
       "ganadores_correctos": 4,
       "fallos": 7,
@@ -17000,6 +17192,7 @@
       "pts_r32": 0,
       "pts_oct1": 0,
       "pts_oct2": 0,
+      "pts_cua": 0,
       "marcadores_exactos": 0,
       "ganadores_correctos": 3,
       "fallos": 8,
