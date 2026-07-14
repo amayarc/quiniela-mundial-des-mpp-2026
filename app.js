@@ -299,13 +299,22 @@ function renderClasificacion() {
     </div>
   `).join('');
 
+  // Bonus (campeón / goleador) por participante, indexado por slot
+  const bonusBySlot = {};
+  (DATA.bonus || []).forEach(b => { bonusBySlot[b.slot] = b; });
+
   // Tabla completa
   tbody.innerHTML = DATA.clasificacion.map(c => {
     const cls = c.pos <= 3 ? `pos-${c.pos}` : '';
+    const b = bonusBySlot[c.slot] || {};
+    const campeon  = b.campeon  ? escapeHtml(b.campeon)  : '—';
+    const goleador = b.goleador ? escapeHtml(b.goleador) : '—';
     return `
       <tr class="${cls}">
         <td>${c.pos}</td>
         <td>${escapeHtml(c.nombre)}</td>
+        <td class="bonus-pick">${campeon}</td>
+        <td class="bonus-pick">${goleador}</td>
         <td class="total">${c.pts_total}</td>
         <td class="hide-mobile center">${c.pts_partidos}</td>
         <td class="hide-mobile center">${c.pts_bonus}</td>

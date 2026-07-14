@@ -171,7 +171,7 @@ main {
   font-weight: 600;
 }
 .rank-table th:first-child, .rank-table td:first-child { text-align: center; width: 50px; }
-.rank-table th:nth-child(3), .rank-table td:nth-child(3) { text-align: center; }
+.rank-table td.bonus-pick { color: var(--muted, #667); font-size: 0.88rem; white-space: nowrap; }
 .rank-table td {
   padding: 10px;
   border-bottom: 1px solid var(--border);
